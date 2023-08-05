@@ -1,0 +1,38 @@
+.marketplace {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4 , 250px);
+    gap: 4%;
+    margin-bottom: 5%;
+}
+
+.headermarket {
+    color: white;
+    padding-top: 10%;
+    margin: 0 auto;
+    margin-bottom: 5%;
+    text-align: center;
+}
+
+@media (max-width: 840px) {
+    .headermarket {
+        padding-top: 18% ;
+    }
+
+    .marketplace {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(2 , 200px);
+        gap: 5%;
+        
+    }
+}
+
+@media (max-width: 440px) {
+    
+    .background {
+        height: 500px;
+        width: 200px;
+    }
+ 
+}

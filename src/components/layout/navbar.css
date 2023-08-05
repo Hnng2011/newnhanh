@@ -1,0 +1,167 @@
+.logo {
+    width: 100px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font-size: 1.5em;
+}
+
+.navbar {
+    position: fixed;
+    height: 70px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 10vw 7vw 7vw 7vw 20vw ;
+    align-items: center;
+    z-index: 10;
+}
+
+.color {
+    background-color: rgba(98, 96, 96, 0.484);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: 0.5s ease;
+}
+
+.trans {
+    background-color: none;
+    transition: 0.5s ease;
+}
+
+.menubar {
+    display: flex;
+}
+
+.dfnav {
+    width: 100px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-bottom: 1px solid white;
+}
+
+.dflink {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    width: 100%;
+    height: 50%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.trans .dflink:hover {
+    background-color: rgb(134, 133, 133);
+    -webkit-backdrop-filter: blur(20px);
+    transition: 0.5s ease;
+}
+
+.color .dflink:hover {
+    background-color: rgb(8, 8, 8);
+    -webkit-backdrop-filter: blur(20px);
+    transition: 0.5s ease;
+}
+
+.navlist {
+    background-color: rgba(98, 96, 96, 0.484);
+    width: 100%;
+    color: white;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: 0.5s ease;
+    align-items: center;
+    border-radius: 0 0 10px 10px;
+    
+}
+
+.navlist_child {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    width: 90%;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    word-wrap: break-word;
+    text-align: center;
+    border-radius: 10px;
+    margin: 4px;
+}
+
+.navlist_child:hover {
+    background-color: rgb(8, 8, 8);
+    -webkit-backdrop-filter: blur(20px);
+    transition: 0.5s ease;
+
+}
+
+.account_btn .navlist{
+    right: 0;
+    width: 100%;
+}
+
+.account_btn  {
+    width: 10vw;
+    margin-left: 58vw;
+    border-bottom: none;
+}
+
+.account_btn button {
+    height: 70%;
+    width: 100%;
+    padding: 5px;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    background-color: rgb(255, 255, 0);
+}
+
+.account_btn button:hover {
+    background-color: rgb(168, 168, 7);
+    transition: 0.5s ease;
+}
+
+@media screen and (max-width: 840px) {
+    .navbar {
+        grid-template-columns: 14vw 9vw 9vw 9vw 16vw ;
+        font-size: 0.8em;
+    }
+    
+    .dfnav {
+        width: 6vw;
+    }
+    
+    .navlist {
+        width: 80px;
+    }
+
+    .account_btn  {
+        width: 18vw;
+        margin-left: 30vw;
+    } 
+}
+
+
+@media (max-width: 440px) {
+    
+    .logo {
+        font-size: 1em;
+    }
+
+    .dflink {
+        display: none;
+    }
+
+    .dfnav {
+        display: none;
+    }
+ 
+}
