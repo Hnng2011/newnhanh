@@ -10,16 +10,6 @@ const navbar = () => {
     const [isScroll, setisScroll] = useState(false)
 
 
-    const handleScroll = () => {
-        const scrollY = window.scrollY;
-
-        if (scrollY > 0) {
-            setisScroll(true);
-        } else {
-            setisScroll(false);
-        }
-    };
-
     const handleHover = (linkName, isHovering) => {
         setHoverState(prevState => ({
             ...prevState,
@@ -27,16 +17,9 @@ const navbar = () => {
         }));
     };
 
-    useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
-
     return (
         <>
-            <nav className={isScroll ? 'navbar color' : 'navbar trans'}>
+            <nav className='navbar'>
                 <Link className='logo' to={'/'}>Logo</Link>
 
                 <div

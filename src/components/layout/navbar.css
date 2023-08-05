@@ -15,19 +15,12 @@
     grid-template-columns: 10vw 7vw 7vw 7vw 20vw ;
     align-items: center;
     z-index: 10;
-}
-
-.color {
     background-color: rgba(98, 96, 96, 0.484);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     transition: 0.5s ease;
 }
 
-.trans {
-    background-color: none;
-    transition: 0.5s ease;
-}
 
 .menubar {
     display: flex;
@@ -55,13 +48,13 @@
     
 }
 
-.trans .dflink:hover {
+.dflink:hover {
     background-color: rgb(134, 133, 133);
     -webkit-backdrop-filter: blur(20px);
     transition: 0.5s ease;
 }
 
-.color .dflink:hover {
+.dflink:hover {
     background-color: rgb(8, 8, 8);
     -webkit-backdrop-filter: blur(20px);
     transition: 0.5s ease;

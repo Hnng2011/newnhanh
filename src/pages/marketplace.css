@@ -8,11 +8,17 @@
     margin: 0 auto;
 }
 
+.marketsell {
+    font-size: 1em;
+    padding: 1%;
+    margin: 1%;
+}
+
 .headermarket {
     color: white;
     padding-top: 10%;
     margin: 0 auto;
-    margin-bottom: 5%;
+    margin-bottom: 3%;
     text-align: center;
 }
 
