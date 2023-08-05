@@ -1,9 +1,11 @@
 .marketplace {
-    display: grid;
+    display: flex;
     justify-content: center;
-    grid-template-columns: repeat(4 , 250px);
-    gap: 4%;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
     margin-bottom: 5%;
+    margin: 0 auto;
 }
 
 .headermarket {

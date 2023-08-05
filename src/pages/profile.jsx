@@ -1,4 +1,5 @@
 import React from 'react'
+import Profile from '../components/profile'
 import './profile.css'
 
 
@@ -7,6 +8,7 @@ const home = () => {
         <div>
             <div className='background'><div className='gradient'></div></div>
             <h1 className='headerprofile'>Profile</h1>
+            <Profile />
         </div>
     )
 }

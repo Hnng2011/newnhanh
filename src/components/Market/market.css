@@ -2,14 +2,15 @@
     background-color: rgba(4, 4, 4, 0.692);
     color: white;
     width: 90%;
-    height: 370px;
+    height: 70px;
+    padding: 2%;
     backdrop-filter: blur(10px);
-    padding: 10%;
     display: flex;
-    flex-direction: column;
-    gap: 8%;
+    gap: 5%;
     border-radius: 10px;
     transition: 0.5s ease;
+    margin: 1% 0;
+    font-size: 0.9em;
 }
 
 .NFT:hover {
@@ -17,33 +18,28 @@
 }
 
 .NFTimg {
-    width: 90%;
-    height: 200px;
+    width: 20%;
+    height: 70px;
     align-self: center;
     border-radius: 10px;
     outline: 1px solid yellow;
+    width: 20%;
 }
 
-.NFTinfo {
-    display: flex;
-    font-size: 0.6em;
-    justify-content: space-between;
+.NFTname , .NFTid {
+    align-self: center;
+    width: 10%;
 }
 
 .NFTowner {
-    font-size: 0.8em;
     word-break: break-all;
+    width: 40%;
+    align-self: center;
 }
 
-.NFTbuy {
-    display: flex;
-    justify-content: space-between;
-    height: 10%;
-    align-items: center;
-}
 
 .NFTbuttonbuy {
-    width: 30%;
+    width: 10%;
     height: 100%;
     color: yellow;
     background-color: transparent;
@@ -51,6 +47,12 @@
     border-radius: 5px;
     transition: 0.5s ease;
     cursor: pointer;
+}
+
+.NFTprice {
+    width: 10%;
+    align-self: center;
+   
 }
 
 .NFTbuttonbuy:hover {

@@ -2,6 +2,19 @@
     color: white;
     padding-top: 10%;
     margin: 0 auto;
-    margin-bottom: 5%;
+    margin-bottom: 3%;
     text-align: center;
+}
+
+.profileinfo {
+    color: white;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(128, 128, 128, 0.615);
+    backdrop-filter: blur(10px);
+    height: 100px;
+    align-items: center;
+    width: 90%;
+    border-radius: 10px;
 }
