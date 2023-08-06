@@ -5,6 +5,10 @@
     padding: 0;
 }
 
+html {
+    height: fit-content;
+}
+
 body::-webkit-scrollbar {
     width: 0;
     background: transparent;
@@ -15,7 +19,9 @@ body {
     background-color: rgb(26, 26, 26);
     background-image: url(../../public/bbburst.svg);
     background-repeat: no-repeat;
+    backdrop-filter: blur(2px);
     background-size: cover;
+    min-height: 100vh;
 }
 
 .background {
