@@ -1,8 +1,7 @@
-import React from 'react'
 import Profile from '../components/profile'
-import './profile.css'
 import History from '../components/profile/history'
 import DisplayNFT from '../components/Market/displayNFT'
+import './profile.css'
 
 const datas = [
     { id: 1, name: 'Sa Mac', address: 'null', price: 0.05, url: '' },
@@ -14,7 +13,7 @@ const datas = [
 
 const home = () => {
     return (
-        <div>
+        <>
             <h1 className='headerprofile'>Profile <span className='refcode'>My Referal Code: ádsaddsasdasdsadasda</span></h1>
             <div className='profile'>
                 <Profile />
@@ -26,7 +25,7 @@ const home = () => {
                     datas.map((data) => { return <DisplayNFT key={data.id} {...data} mode={'myNFT'} /> })
                 }
             </div>
-        </div>
+        </>
     )
 }
 

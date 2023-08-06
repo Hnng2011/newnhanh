@@ -1,8 +1,6 @@
-import React from 'react'
 import './market.css'
 
 const displayNFT = ({ id, name, price, url, mode }) => {
-    console.log(mode)
     return (
 
         <>

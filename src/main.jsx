@@ -5,12 +5,9 @@ import { BrowserRouter } from "react-router-dom";
 import './style/index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-
-  <React.StrictMode>
-    <BrowserRouter>
-      <Suspense fallback={console.log("Đã Load")}>
-        <App />
-      </Suspense>
-    </BrowserRouter>
-  </React.StrictMode>
+  <BrowserRouter>
+    <Suspense fallback={console.log("Đã Load")}>
+      <App />
+    </Suspense>
+  </BrowserRouter>
 )

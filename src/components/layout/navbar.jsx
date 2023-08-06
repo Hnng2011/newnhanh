@@ -1,4 +1,3 @@
-import React, { useState } from 'react'
 import { Link, useLocation } from "react-router-dom"
 import './navbar.css'
 
@@ -23,8 +22,6 @@ const navbar = () => {
                     <Link className={`dflink ${isCurrentPath('/swap') ? 'active' : ''}`} to={'/swap'}>Leaderboard</Link>
                     <Link className={`dflink ${isCurrentPath('/profile') ? 'active' : ''}`} to={'/profile'}>Profile</Link>
                 </div>
-
-
                 <button className='button' type='button'>Connect Wallet </button>
 
             </nav >

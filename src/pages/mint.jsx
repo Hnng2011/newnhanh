@@ -1,7 +1,5 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import './mint.css'
-
-
 
 const mint = () => {
     const [url, setUrl] = useState('')
@@ -11,9 +9,6 @@ const mint = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
         setUrl(() => code)
-        if (isAvailable == true) {
-            console.log("Mint nè")
-        }
         setisAvailable((prevState) => !prevState)
     }
 
@@ -40,7 +35,6 @@ const mint = () => {
                             <button className='two' type="submit">Submit</button>
                         )}
                     </div>
-
                 </form>
             </div>
         </>

@@ -26,7 +26,6 @@ function App() {
             </Suspense>
           }
         />
-
         <Route
           path="/market"
           element={
@@ -44,10 +43,7 @@ function App() {
             </Suspense>
           }
         />
-
       </Routes>
-
-
     </>
   )
 }
