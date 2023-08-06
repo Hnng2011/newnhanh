@@ -28,11 +28,11 @@ const mint = () => {
 
                     <div className='submit'>
                         {isAvailable ? (
-                            <button className='one' type="submit">
+                            <button type="submit">
                                 Mint
                             </button>
                         ) : (
-                            <button className='two' type="submit">Submit</button>
+                            <button type="submit">Submit</button>
                         )}
                     </div>
                 </form>

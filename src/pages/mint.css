@@ -1,5 +1,5 @@
 .mint {
-    height: 400px;
+    min-height: 100vh;
     padding-top: 10%;
 }
 
@@ -11,7 +11,7 @@
 }
 
 .mint img {
-    height: 100%;
+    height: 50%;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.508);
     backdrop-filter: blur(20px);
@@ -19,7 +19,7 @@
 }
 
 .form {
-    height: 100%;
+    height: 50%;
     margin: 8%;
     display: flex;
     flex-direction: column;
@@ -45,7 +45,7 @@
     backdrop-filter: blur(20px);
     color: white;
     width: 100%;
-    height: 100%;
+    height: 70%;
     outline: none;
     border: none;
     padding: 1%;
@@ -53,18 +53,13 @@
 }
 
 
-.form input:focus {
-    transition: 1s ease;
-}
-
 .form .submit {
     height: 15%;
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
 }
 
-.submit .one , .submit .two {
+.submit button {
     height: 100%;
     width: 30%;
     cursor: pointer;
@@ -72,10 +67,6 @@
     font-size: 1em;
     color: black;
     border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
 }
 
 

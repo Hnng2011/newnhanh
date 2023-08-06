@@ -23,7 +23,6 @@ const navbar = () => {
                     <Link className={`dflink ${isCurrentPath('/profile') ? 'active' : ''}`} to={'/profile'}>Profile</Link>
                 </div>
                 <button className='button' type='button'>Connect Wallet </button>
-
             </nav >
         </>
     )

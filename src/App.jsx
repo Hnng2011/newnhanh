@@ -4,6 +4,7 @@ import Navbar from './components/layout/navbar';
 const Marketplace = React.lazy(() => import('./pages/marketplace'));
 const Mint = React.lazy(() => import('./pages/mint'))
 const Profile = React.lazy(() => import('./pages/profile'))
+const Footer = React.lazy(() => import('./components/layout/footer'))
 
 function App() {
   return (
@@ -44,6 +45,7 @@ function App() {
           }
         />
       </Routes>
+      <Footer />
     </>
   )
 }

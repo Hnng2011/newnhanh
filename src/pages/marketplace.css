@@ -61,15 +61,8 @@
 }
 
 .bgmarket {
-    left: 2%;
-    top: 20%;
-}
-
-.bgmarkettwo {
-    height: 20%;
-    filter: blur(1px);
-    right: 2%;
-    bottom: 2%;
+    left: 0%;
+    top: 25%;
 }
 
 @media (max-width: 840px) {
