@@ -2,11 +2,10 @@ import React, { useEffect } from 'react'
 import './history.css'
 import Chart from 'chart.js/auto'
 
-
-
-
 const history = () => {
     useEffect(() => {
+        Chart.defaults.borderColor = 'rgba(255, 255, 255, 0.2)';
+        Chart.defaults.color = '#FFF';
         (async function () {
             const data = [
                 { year: 2010, count: 10 },
@@ -21,7 +20,7 @@ const history = () => {
             new Chart(
                 document.getElementById('acquisitions'),
                 {
-                    type: 'bar',
+                    type: 'line',
                     options: {
                         plugins: {
                             legend: {
@@ -43,7 +42,10 @@ const history = () => {
                         datasets: [
                             {
                                 label: 'Acquisitions by year',
-                                data: data.map(row => row.count)
+                                backgroundColor: 'rgb(255, 255, 0 , 1)',
+                                borderColor: 'rgb(255, 255, 0 , 1)',
+                                data: data.map(row => row.count),
+
                             }
                         ]
                     }

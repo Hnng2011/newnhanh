@@ -19,7 +19,6 @@ const mint = () => {
 
     return (
         <>
-            <div className='background'><div className='gradient'></div></div>
             <div className='mint'>
                 <img className='mintimg' src={url} alt='name' />
                 <form className='form' onSubmit={handleSubmit}>
@@ -44,7 +43,6 @@ const mint = () => {
 
                 </form>
             </div>
-
         </>
     )
 }

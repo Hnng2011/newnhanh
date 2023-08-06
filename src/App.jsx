@@ -1,10 +1,9 @@
-import React, { useState, Suspense } from 'react'
+import React, { Suspense } from 'react'
 import { Route, Routes } from "react-router";
 import Navbar from './components/layout/navbar';
 const Marketplace = React.lazy(() => import('./pages/marketplace'));
 const Mint = React.lazy(() => import('./pages/mint'))
 const Profile = React.lazy(() => import('./pages/profile'))
-
 
 function App() {
   return (

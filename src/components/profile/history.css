@@ -1,7 +1,11 @@
 .chart {
-    width: 90%;
-    margin: 5% auto;
+    justify-content: center;
+    display: flex;
+    justify-content: center;
+    height: 20vw;
     background-color: rgba(19, 19, 19, 0.615);
     backdrop-filter: blur(10px);
-    border-top: 1px solid white;
+    width: fit-content;
+    border-radius: 10px;
+    margin: 0  auto;
 }

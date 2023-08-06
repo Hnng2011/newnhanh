@@ -28,15 +28,6 @@ const datas = [
 ]
 
 function Items({ currentItems }) {
-    useEffect(() => {
-        const listItems = document.querySelectorAll('.NFT');
-
-        listItems.forEach((item, index) => {
-            item.style.animationDuration = `${index * 0.1 + 1}s`;
-        });
-
-    }, [currentItems]);
-
     return (
         <div>
             <div className='background'><div className='gradient'></div></div>
@@ -57,14 +48,12 @@ function PaginatedItems({ itemsPerPage }) {
 
     useEffect(() => {
         const endOffset = itemOffset + itemsPerPage;
-        console.log(`Loading items from ${itemOffset} to ${endOffset}`);
         setCurrentItems(datas.slice(itemOffset, endOffset));
         setPageCount(Math.ceil(datas.length / itemsPerPage));
     }, [itemOffset, itemsPerPage]);
 
     const handlePageClick = (event) => {
         const newOffset = event.selected * itemsPerPage % datas.length;
-        console.log(`User requested page number ${event.selected}, which is offset ${newOffset}`);
         setItemOffset(newOffset);
     };
 
@@ -98,7 +87,7 @@ function PaginatedItems({ itemsPerPage }) {
 const home = () => {
     return (
         <>
-            <PaginatedItems itemsPerPage={5} />
+            <PaginatedItems itemsPerPage={8} />
         </>
 
     )
