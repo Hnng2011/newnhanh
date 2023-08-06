@@ -4,7 +4,7 @@ const App = React.lazy(() => import('./App.jsx'));
 import { BrowserRouter } from "react-router-dom";
 import './style/index.css'
 
-ReactDOM.createRoot(document.body).render(
+ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <Suspense fallback={console.log("Đã Load")}>
       <App />
