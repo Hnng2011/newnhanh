@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from "react-router-dom"
-import Navlist from './navlist'
 import './navbar.css'
 
 
 const navbar = () => {
 
     const [hoverState, setHoverState] = useState({});
-    const [isScroll, setisScroll] = useState(false)
+    const [isConnect, setisConnect] = useState(true)
 
 
     const handleHover = (linkName, isHovering) => {
@@ -17,45 +16,29 @@ const navbar = () => {
         }));
     };
 
+    useEffect(() => {
+
+    }, [])
+
     return (
         <>
             <nav className='navbar'>
                 <Link className='logo' to={'/'}>Logo</Link>
-
-                <div
-                    className='dfnav'
-                    onMouseMove={() => handleHover('mint', true)}
-                    onMouseLeave={() => handleHover('mint', false)}>
-                    <Link className='dflink' to={'/mint'}>NFT</Link>
-                    {hoverState.mint && < Navlist routes={[{ route: 'mint', name: 'Mint' }, { route: '/market', name: 'Market Place ' }]} />}
+                <div className='dfnav'>
+                    <Link className='dflink' to={'/market'}>Marketplace</Link>
+                    <Link className="dflink" to={'/mint'}>Mint</Link>
+                    <Link className='dflink' to={'/farm'}>Pool</Link>
+                    <Link className="dflink" to={'/wtbs'}>Want Buy/Sell</Link>
+                    <Link className="dflink" to={'/swap'}>Leaderboard</Link>
+                    {isConnect && <Link className='dflink' to={'/profile'}>Profile</Link>}
                 </div>
 
-
                 <div
-                    className='dfnav'
-                    onMouseMove={() => handleHover('swap', true)}
-                    onMouseLeave={() => handleHover('swap', false)}>
-                    <Link className="dflink" to={'/swap'}>Trade</Link>
-                    {hoverState.swap && < Navlist routes={[{ route: 'swap', name: 'Swap' }, { route: 'addlp', name: 'ADD LP' }]} />}
-                </div>
-
-
-                <div
-                    className='dfnav'
-                    onMouseMove={() => handleHover('farm', true)}
-                    onMouseLeave={() => handleHover('farm', false)}>
-                    <Link className='dflink' to={'/farm'}>Earn</Link>
-                    {hoverState.farm && <Navlist routes={[{ route: '/farm', name: 'Farm' }, { route: '/bal', name: 'Borrow And Lend' }]} />}
-                </div>
-
-
-                <div
-                    className='dfnav account_btn'
+                    className='account_btn'
                     onMouseMove={() => handleHover('account', true)}
                     onMouseLeave={() => handleHover('account', false)}
                 >
                     <button type='button'>Connect Wallet </button>
-                    {hoverState.account && < Navlist routes={[{ route: '/profile', name: 'Profile' }, { route: '/ldb', name: 'Leader Board' }]} />}
                 </div>
 
             </nav >

@@ -7,11 +7,10 @@
     backdrop-filter: blur(10px);
     display: flex;
     gap: 5%;
-    border-radius: 10px;
     transition: 0.5s ease;
-    margin: 4px 0;
     font-size: 0.9em;
     animation: appear 1.5s ease;
+    border-bottom:1px solid white ; 
 }
 
 @keyframes appear {
@@ -29,25 +28,18 @@
 }
 
 .NFTimg {
-    width: 20%;
-    height: 40px;
+    height: 50px;
+    aspect-ratio: 1 / 1;
     align-self: center;
     border-radius: 10px;
     outline: 1px solid yellow;
-    width: 20%;
+    
 }
 
 .NFTname , .NFTid {
     align-self: center;
-    width: 10%;
+    width: 20%;
 }
-
-.NFTowner {
-    word-break: break-all;
-    width: 40%;
-    align-self: center;
-}
-
 
 .NFTbuttonbuy {
     width: 10%;
@@ -61,7 +53,7 @@
 }
 
 .NFTprice {
-    width: 10%;
+    width: 20%;
     align-self: center;
    
 }
