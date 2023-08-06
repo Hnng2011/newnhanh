@@ -44,7 +44,7 @@ const navbar = () => {
                     onMouseMove={() => handleHover('account', true)}
                     onMouseLeave={() => handleHover('account', false)}
                 >
-                    <button type='button'>Connect Wallet </button>
+                    <button className='button' type='button'>Connect Wallet </button>
                 </div>
 
             </nav >

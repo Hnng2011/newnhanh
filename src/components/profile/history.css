@@ -1,0 +1,7 @@
+.chart {
+    width: 90%;
+    margin: 5% auto;
+    background-color: rgba(19, 19, 19, 0.615);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid white;
+}
