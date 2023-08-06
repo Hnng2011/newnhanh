@@ -1,7 +1,3 @@
-* {
-    cursor: pointer;
-}
-
 .logo {
     text-align: center;
     text-decoration: none;
@@ -20,6 +16,7 @@
     background-color: rgba(98, 96, 96, 0.484);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1000' height='70' preserveAspectRatio='none' viewBox='0 0 1000 70'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1024%26quot%3b)' fill='none'%3e%3cpath d='M899.9423098208368 6.836555409900473L887.955285743679 10.964018800833987 900.1399928686582 26.880823221103995z' fill='rgba(216%2c 237%2c 2%2c 0.15)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M307.7155060368902 31.196302223460584L310.70539935889036 48.15282986311658 324.67203367654616 28.206408901460392z' fill='rgba(216%2c 237%2c 2%2c 0.15)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M733.2702168993765 68.13631626649574L729.1805545814073 56.25907447662878 717.3033127915403 60.348736794597954 721.3929751095095 72.22597858446491z' fill='rgba(216%2c 237%2c 2%2c 0.15)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M688.766%2c5.14C691.096%2c5.122%2c693.692%2c5.017%2c694.944%2c3.052C696.263%2c0.981%2c695.74%2c-1.706%2c694.463%2c-3.804C693.241%2c-5.811%2c691.116%2c-7.094%2c688.766%2c-7.093C686.417%2c-7.092%2c684.311%2c-5.798%2c683.074%2c-3.801C681.761%2c-1.681%2c681.082%2c1.044%2c682.421%2c3.148C683.697%2c5.152%2c686.39%2c5.158%2c688.766%2c5.14' fill='rgba(216%2c 237%2c 2%2c 0.15)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M207.708%2c45.238C215.108%2c45.326%2c220.433%2c38.918%2c223.989%2c32.428C227.377%2c26.244%2c228.78%2c18.998%2c225.509%2c12.751C222.004%2c6.058%2c215.261%2c1.167%2c207.708%2c1.334C200.388%2c1.496%2c194.542%2c6.984%2c191.222%2c13.51C188.215%2c19.42%2c189.026%2c26.165%2c192.083%2c32.049C195.451%2c38.531%2c200.404%2c45.151%2c207.708%2c45.238' fill='rgba(216%2c 237%2c 2%2c 0.15)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M265.632211901626 46.14125101831432L249.79763098623042 48.64920225437284 268.1401631376845 61.97583193370993z' fill='rgba(216%2c 237%2c 2%2c 0.15)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M222.8969614623839 18.715274593826422L230.5035870225874 26.592165947071322 238.3804783758323 18.98554038686781 230.7738528156288 11.108649033622912z' fill='rgba(216%2c 237%2c 2%2c 0.15)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M113.43%2c50.431C118.323%2c50.34%2c122.345%2c47.233%2c125.025%2c43.138C128.058%2c38.503%2c131.009%2c32.688%2c128.14%2c27.95C125.321%2c23.294%2c118.859%2c23.6%2c113.43%2c23.99C108.849%2c24.319%2c104.427%2c25.947%2c101.976%2c29.831C99.349%2c33.994%2c98.674%2c39.278%2c101.066%2c43.581C103.52%2c47.995%2c108.381%2c50.524%2c113.43%2c50.431' fill='rgba(216%2c 237%2c 2%2c 0.15)' class='triangle-float1'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1024'%3e%3crect width='1000' height='70' fill='white'%3e%3c/rect%3e%3c/mask%3e%3cstyle%3e %40keyframes float1 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-10px%2c 0)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float1 %7b animation: float1 5s infinite%3b %7d %40keyframes float2 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-5px%2c -5px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float2 %7b animation: float2 4s infinite%3b %7d %40keyframes float3 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(0%2c -10px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float3 %7b animation: float3 6s infinite%3b %7d %3c/style%3e%3c/defs%3e%3c/svg%3e");
     transition: 0.5s ease;
     display: flex;
 }
@@ -44,10 +41,10 @@
     padding: 2%;
 }
 
-.dflink:hover {
-    background-color: rgb(134, 133, 133);
+.active {
+    background-color: rgb(8, 8, 8);
     -webkit-backdrop-filter: blur(20px);
-    transition: 0.5s ease;
+    
 }
 
 .dflink:hover {
@@ -72,6 +69,7 @@
     outline: none;
     border: none;
     background-color: rgb(255, 255, 0);
+    cursor: pointer;
 }
 
 .account_btn button:hover {

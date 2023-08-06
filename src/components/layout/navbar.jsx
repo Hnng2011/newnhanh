@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 import './navbar.css'
 
 
@@ -7,6 +7,12 @@ const navbar = () => {
 
     const [hoverState, setHoverState] = useState({});
     const [isConnect, setisConnect] = useState(true)
+    const location = useLocation();
+    const { pathname } = location;
+
+    const isCurrentPath = (path) => {
+        return path === pathname;
+    };
 
 
     const handleHover = (linkName, isHovering) => {
@@ -25,11 +31,11 @@ const navbar = () => {
             <nav className='navbar'>
                 <Link className='logo' to={'/'}>Logo</Link>
                 <div className='dfnav'>
-                    <Link className='dflink' to={'/market'}>Marketplace</Link>
-                    <Link className="dflink" to={'/mint'}>Mint</Link>
-                    <Link className='dflink' to={'/farm'}>Pool</Link>
-                    <Link className="dflink" to={'/wtbs'}>Want Buy/Sell</Link>
-                    <Link className="dflink" to={'/swap'}>Leaderboard</Link>
+                    <Link className={`dflink ${isCurrentPath('/market') ? 'active' : ''}`} to={'/market'}>Marketplace</Link>
+                    <Link className={`dflink ${isCurrentPath('/mint') ? 'active' : ''}`} to={'/mint'}>Mint</Link>
+                    <Link className={`dflink ${isCurrentPath('/farm') ? 'active' : ''}`} to={'/farm'}>Pool</Link>
+                    <Link className={`dflink ${isCurrentPath('/wtbs') ? 'active' : ''}`} to={'/wtbs'}>Want Buy/Sell</Link>
+                    <Link className={`dflink ${isCurrentPath('/swap') ? 'active' : ''}`} to={'/swap'}>Leaderboard</Link>
                     {isConnect && <Link className='dflink' to={'/profile'}>Profile</Link>}
                 </div>
 
