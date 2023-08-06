@@ -22,6 +22,40 @@
     text-align: center;
 }
 
+.pagination {
+    display: flex;
+    justify-content: center;
+    font-size: 1em;
+    width: 40%;
+    margin: 1%  auto;
+}
+
+.pagination li {
+    list-style: none;
+    color: white;
+    margin-left: 2%;
+    margin-left: 2%;
+    padding: 1%;
+    border-radius: 5px;
+}
+
+.pagination li a{
+    width: 100%;
+}
+
+.pagination li a{
+    cursor: pointer;
+    
+}
+
+.activepage {
+    background-color: black;
+    transition: 0.5s ease;
+    
+}
+
+
+
 @media (max-width: 840px) {
     .headermarket {
         padding-top: 18% ;
