@@ -64,3 +64,9 @@
 }
 
 
+@media (max-width: 840px) {
+    .NFT {
+        height: 60px
+    }
+}
+

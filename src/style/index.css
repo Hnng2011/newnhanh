@@ -13,6 +13,9 @@ body::-webkit-scrollbar {
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: rgb(26, 26, 26);
+    background-image: url(../../public/bbburst.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .background {
