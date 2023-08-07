@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react'
 import { Route, Routes } from "react-router";
+
 import Navbar from './components/layout/navbar';
 import Wantbuyorsell from './pages/wantbuyorsell';
 import Marketplace from './pages/marketplace';
@@ -10,16 +10,6 @@ import Footer from './components/layout/footer';
 import Leaderboard from './pages/leaderboard';
 
 function App() {
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 2000);
-
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
     <>
       <Navbar />
