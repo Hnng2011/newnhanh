@@ -20,7 +20,7 @@
     height: 50%;
     color: white;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.363);
+    background-color: rgba(255, 255, 0, 0.266);
     border-radius: 10px;
     position: relative;
     outline: 1px solid yellow;
@@ -78,5 +78,5 @@
     height: 250px;
     width: 250px;
     margin-top: 20px;
-    outline: 2px solid yellow;
+    border-radius: 20px;
 }

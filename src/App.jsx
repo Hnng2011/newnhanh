@@ -1,6 +1,7 @@
 import React, { Suspense, createContext, useState } from 'react'
 import { Route, Routes } from "react-router";
 import Navbar from './components/layout/navbar';
+const Wantbuyorsell = React.lazy(() => import('./pages/wantbuyorsell'))
 const Marketplace = React.lazy(() => import('./pages/marketplace'));
 const Mint = React.lazy(() => import('./pages/mint'))
 const Pool = React.lazy(() => import('./pages/pool'))
@@ -53,6 +54,15 @@ function App() {
             element={
               <Suspense fallback={<div>Loading...</div>}>
                 <Profile />
+              </Suspense>
+            }
+          />
+
+          <Route
+            path="/wtbs"
+            element={
+              <Suspense fallback={<div>Loading...</div>}>
+                <Wantbuyorsell />
               </Suspense>
             }
           />
