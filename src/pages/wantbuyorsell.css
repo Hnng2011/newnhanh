@@ -20,10 +20,68 @@
 
 .saleform {
     width: 60%;
-    margin: 5% auto;
+    margin: 1% auto;
     color: white;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+}
+
+.saleNFT {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+.saleNFT select {
+    margin-top: 2%;
+    height: 40px;
+    padding: 2px;
+    background: black;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.priceNFT , .offerNFT {
+    width: 40%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 2%;
+    align-items: center;
+    row-gap: 15%;
+    margin-bottom: 1%;
+}
+
+
+.priceNFT label , .offerNFT label{
+    grid-column: span 2 ;
+}
+
+.priceNFT input , .offerNFT input{
+    margin-top: 2%;
+    height: 36px;
+    background: black;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 2px;
+}
+
+.priceNFT button , .offerNFT button {
+    height: 40px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    font-size: 1em;
+    background-color: yellow;
+}   
+
+.saleform img {
+    margin-top: 2%;
+    width: 40%;
+    aspect-ratio: 1 / 1;
+    background-color: azure;
+    border-radius: 20px;
 }

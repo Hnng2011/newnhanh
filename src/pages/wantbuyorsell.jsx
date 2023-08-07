@@ -1,6 +1,8 @@
 import './wantbuyorsell.css'
 import { useState } from 'react'
 
+const datas = [1, 2, 3, 4, 5, 6]
+
 const wantbuyorsell = () => {
     const [Mode, setMode] = useState(false)
 
@@ -21,47 +23,49 @@ const wantbuyorsell = () => {
                 ?
                 (<div>
                     <form className='saleform'>
-                        <div>
+                        <div className='saleNFT'>
                             <label>Chọn NFT cần bán</label>
-                            <div className='codeinput'>
-                                <input
-                                    type="text"
-                                />
-                            </div>
+                            <select>
+                                {datas.map((data) => { return <option value={data}>{data}</option> })}
+                            </select>
                         </div>
 
-                        <div>
+                        <div className='priceNFT'>
                             <label>Giá bán</label>
-                            <div className='codeinput'>
+                            <div>
                                 <input
                                     type="text"
                                 />
                             </div>
+                            <button type="submit">Bán</button>
                         </div>
+                        <img src='..' alt='nft cuar ban' />
 
-                        <button type="submit">Bán</button>
                     </form>
                 </div>)
                 :
                 (<div>
                     <form className='saleform'>
-                        <div>
-                            <label>Chọn NFT cần offer</label>
-                            <div className='codeinput'>
+                        <div className='offerNFT'>
+                            <label>Nhập ID NFT cần lập đơn mua</label>
+                            <div>
                                 <input
                                     type="text"
                                 />
                             </div>
+                            <button type="submit">Kiểm tra</button>
                         </div>
-                        <div>
-                            <label>Nhập giá Offer</label>
-                            <div className='codeinput'>
+
+                        <div className='priceNFT'>
+                            <label>Giá sẽ mua</label>
+                            <div>
                                 <input
                                     type="text"
                                 />
                             </div>
                             <button type="submit">Offer</button>
                         </div>
+                        <img src='..' alt='nft muon mua' />
                     </form>
                 </div>)}
         </>
