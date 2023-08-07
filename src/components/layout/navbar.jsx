@@ -19,7 +19,7 @@ const navbar = () => {
                     <Link className={`dflink ${isCurrentPath('/mint') ? 'active' : ''}`} to={'/mint'}>Mint</Link>
                     <Link className={`dflink ${isCurrentPath('/pool') ? 'active' : ''}`} to={'/pool'}>Pool</Link>
                     <Link className={`dflink ${isCurrentPath('/wtbs') ? 'active' : ''}`} to={'/wtbs'}>Want Buy/Sell</Link>
-                    <Link className={`dflink ${isCurrentPath('/swap') ? 'active' : ''}`} to={'/swap'}>Leaderboard</Link>
+                    <Link className={`dflink ${isCurrentPath('/ltb') ? 'active' : ''}`} to={'/ltb'}>Leaderboard</Link>
                     <Link className={`dflink ${isCurrentPath('/profile') ? 'active' : ''}`} to={'/profile'}>Profile</Link>
                 </div>
                 <button className='button' type='button'>Connect Wallet &gt;</button>

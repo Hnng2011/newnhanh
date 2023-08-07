@@ -1,4 +1,4 @@
-import React, { Suspense, createContext, useState } from 'react'
+import React, { Suspense } from 'react'
 import { Route, Routes } from "react-router";
 import Navbar from './components/layout/navbar';
 const Wantbuyorsell = React.lazy(() => import('./pages/wantbuyorsell'))
@@ -7,7 +7,7 @@ const Mint = React.lazy(() => import('./pages/mint'))
 const Pool = React.lazy(() => import('./pages/pool'))
 const Profile = React.lazy(() => import('./pages/profile'))
 const Footer = React.lazy(() => import('./components/layout/footer'))
-const MyContext = createContext();
+const Leaderboard = React.lazy(() => import('./pages/leaderboard'))
 
 function App() {
   return (
@@ -63,6 +63,15 @@ function App() {
             element={
               <Suspense fallback={<div>Loading...</div>}>
                 <Wantbuyorsell />
+              </Suspense>
+            }
+          />
+
+          <Route
+            path="/ltb"
+            element={
+              <Suspense fallback={<div>Loading...</div>}>
+                <Leaderboard />
               </Suspense>
             }
           />
