@@ -1,12 +1,12 @@
 .NFT  {
-    background-color: rgba(4, 4, 4, 0.692);
+    background-color: rgba(32, 32, 32, 0.664);
     color: white;
     width: 90%;
     height: 40px;
     padding: 2%;
     backdrop-filter: blur(10px);
     display: flex;
-    gap: 5%;
+    gap: 8%;
     transition: 0.5s ease;
     font-size: 0.9em;
     animation: appear 1.5s ease;

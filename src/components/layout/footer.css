@@ -36,6 +36,7 @@
 
 .rowfive ul {
     display: grid;
+    height: fit-content;
     grid-template-columns: 1fr 1fr 1fr;
 }
 
@@ -49,6 +50,7 @@
 
 .rowfive ul h2 {
    grid-column: span 3;
+   padding-bottom: 8%;
 }
 .rowfive li img {
     height: 2vw;

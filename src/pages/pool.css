@@ -1,0 +1,21 @@
+.pool {
+    min-height: 100vh;
+    color: white;
+}
+
+.pool h1 {
+    background-color: #ff662f1b;
+    backdrop-filter: blur(5px);
+    margin: 2% auto;
+    padding: 2% 8% 2% 8%;
+    border-radius: 10px;
+    font-size: 5em;
+    width: 70%;
+    background-image: url('../../public/Clouds-66.7s-1630px.svg');
+    background-size: 20% 100%;
+}
+
+.pool h1 p {
+    font-size: 0.4em;
+}
+

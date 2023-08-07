@@ -68,7 +68,8 @@ function PaginatedItems({ itemsPerPage }) {
 const home = () => {
     return (
         <>
-            <img className='bgmarket' src='../../public/market-store-svgrepo-com.svg' />
+            <div className='bg1'></div>
+            <div className='bg2'></div>
             <PaginatedItems itemsPerPage={5} />
         </>
 

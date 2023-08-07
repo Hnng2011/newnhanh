@@ -16,7 +16,7 @@
 
 .headermarket {
     color: #FF652F;
-    padding-top: 10%;
+    padding-top: 5%;
     margin: 0 auto;
     margin-bottom: 3%;
     text-align: center;
@@ -54,15 +54,25 @@
     
 }
 
-.bgmarket , .bgmarkettwo {
+.bg1 {
+    background-image: url('../../public/_75551516-ae39-4652-ba8d-56395ec9b588.png');
+    background-size: contain;
+    height: 200px;
+    width: 200px;
     position: absolute;
-    height: 20%;
-    filter: blur(4px);
+    top: 15%;
+    filter: blur(2px);
 }
 
-.bgmarket {
-    left: 0%;
-    top: 25%;
+.bg2 {
+    background-image:url('../../public/_7f22db9c-710d-4b96-8fb7-70e436b33a61_preview_rev_1.png');
+    background-size: contain;
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    right: 2%;
+    top: 90%;
+    filter: blur(1px);
 }
 
 @media (max-width: 840px) {

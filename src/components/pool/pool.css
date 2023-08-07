@@ -1,0 +1,79 @@
+.poolin {
+    width: 50%;
+    background-color: rgba(56, 56, 56, 0.493);
+    margin: 1% auto;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(6 , 1fr);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 70px;
+}
+
+.poolinfo {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: 2%;
+    justify-content: center;
+}
+
+.poolinfo h2 {
+    font-size: 0.7em;
+}
+
+.poolinfo img {
+    font-size: 0.7em;
+    height: 80%;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    background-color: red;
+}
+
+.pooldetail {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.pooldetail h2{
+    font-size: 0.9em;
+    color: yellow;
+}
+
+.pooldetail p {
+    font-size: 0.8em;
+}
+
+.stake , .harvest {
+    width: 80%;
+    padding: 8%;
+    background-color: transparent;
+    outline: 1px solid yellow;
+    color: yellow;
+    border: none;
+    border: 5px;
+    cursor: pointer;
+    transition: 0.2s linear;
+    border-radius: 20px 0px 0px 20px;
+}
+
+.stake:hover {
+    background-color: yellow;
+    color: black;
+    
+}
+
+.harvest {
+    outline:  1px solid #20fca4;
+    color: #20fca4;
+    border-radius: 0 20px 20px 0;
+}
+
+.harvest:hover {
+    background-color:  #20fca4;
+    color: black;
+}
+
