@@ -47,33 +47,54 @@
     font-size: 0.8em;
 }
 
-.stake , .harvest {
-    width: 80%;
-    padding: 8%;
-    background-color: transparent;
-    outline: 1px solid yellow;
-    color: yellow;
-    border: none;
-    border: 5px;
-    cursor: pointer;
-    transition: 0.2s linear;
-    border-radius: 20px 0px 0px 20px;
+.buttonpool_1 {
+    display: flex;
+    justify-content: flex-end;
+    height: 70%;
+    width: 100%;
 }
 
-.stake:hover {
+.buttonpool_1 button {
+    width: 60%;
+    font-family: 'Roboto', sans-serif;
+    margin-right: 4%;
+    border-radius: 12px 0 0 12px ;
+    border: none;
+    cursor: pointer;
+    color: yellow;
+    outline: 1px solid yellow;
+    background-color: transparent;
+    transition: 0.2s linear;
+}
+
+.buttonpool_1 button:hover {
     background-color: yellow;
     color: black;
+}
+
+
+.buttonpool_2 {
+    display: flex;
+    justify-self: flex-start;
+    height: 70%;
+    width: 100%;
     
 }
 
-.harvest {
-    outline:  1px solid #20fca4;
-    color: #20fca4;
-    border-radius: 0 20px 20px 0;
+.buttonpool_2 button{
+    font-family: 'Roboto', sans-serif;
+    width: 60%;
+    margin-left: 4%;
+    border-radius: 0 12px 12px 0 ;
+    border: none;
+    cursor: pointer;
+    color: #13A56A;
+    outline: 3px solid #13A56A;
+    background-color: transparent;
+    transition: 0.2s linear;
 }
 
-.harvest:hover {
-    background-color:  #20fca4;
+.buttonpool_2 button:hover {
+    background-color: #13A56A;
     color: black;
 }
-

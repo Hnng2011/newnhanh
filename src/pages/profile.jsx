@@ -2,6 +2,7 @@ import Profile from '../components/profile'
 import History from '../components/profile/history'
 import DisplayNFT from '../components/Market/displayNFT'
 import './profile.css'
+import { useContext } from 'react'
 
 const datas = [
     { id: 1, name: 'Sa Mac', address: 'null', price: 0.05, url: '' },

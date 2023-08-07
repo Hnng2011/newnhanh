@@ -20,6 +20,17 @@
     margin: 0 auto;
     margin-bottom: 3%;
     text-align: center;
+    position: relative;
+}
+
+.headermarket::before {
+    position: absolute;
+    content: '';
+    top: 10%;
+    margin: 0 auto;
+    width: 10%;
+    height: 100%;
+    border-bottom: 2px solid #FF652F;
 }
 
 .pagination {
@@ -49,7 +60,7 @@
 }
 
 .activepage {
-    background-color: black;
+    background-color: #FF652F;
     transition: 0.5s ease;
     
 }
@@ -71,9 +82,10 @@
     width: 200px;
     position: absolute;
     right: 2%;
-    top: 90%;
+    bottom: 0%;
     filter: blur(1px);
 }
+
 
 @media (max-width: 840px) {
     .headermarket {

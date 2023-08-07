@@ -1,8 +1,7 @@
 import './market.css'
 
-const displayNFT = ({ id, name, price, url, mode }) => {
+const displayNFT = ({ id, name, price, url, mode, handleOpenform, isOpen }) => {
     return (
-
         <>
             {!mode ?
                 <>
@@ -11,7 +10,7 @@ const displayNFT = ({ id, name, price, url, mode }) => {
                         <h4 className='NFTname'><span>Name: </span>{name}</h4>
                         <h4 className='NFTid'><span>ID:</span> {id}</h4>
                         <h4 className='NFTprice'><span>Price :</span> {price}</h4>
-                        <button className='NFTbuttonbuy'>Buy</button>
+                        <button onClick={handleOpenform} className='NFTbuttonbuy'>Buy</button>
                     </div>  </>
                 : (
                     <>

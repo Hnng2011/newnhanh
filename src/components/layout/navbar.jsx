@@ -22,7 +22,7 @@ const navbar = () => {
                     <Link className={`dflink ${isCurrentPath('/swap') ? 'active' : ''}`} to={'/swap'}>Leaderboard</Link>
                     <Link className={`dflink ${isCurrentPath('/profile') ? 'active' : ''}`} to={'/profile'}>Profile</Link>
                 </div>
-                <button className='button' type='button'>Connect Wallet </button>
+                <button className='button' type='button'>Connect Wallet &gt;</button>
             </nav >
         </>
     )

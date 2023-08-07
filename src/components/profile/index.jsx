@@ -9,7 +9,6 @@ const index = () => {
         balance: '1000 SPT',
     })
 
-
     return (
         <>
             <div className='profileinfo'>

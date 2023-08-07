@@ -20,11 +20,12 @@ const pool = ({ name, url, total, apr, end }) => {
                 <p>{end} days</p>
             </div>
 
-            <div>
-                <button className='stake'>Stake</button>
+            <div className='buttonpool_1'>
+                <button>Stake</button>
             </div>
-            <div>
-                <button className='harvest'>Harvest</button>
+
+            <div className='buttonpool_2'>
+                <button>Harvest</button>
             </div>
 
 
