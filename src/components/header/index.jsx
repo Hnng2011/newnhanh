@@ -16,7 +16,7 @@ const Header = () => {
     const [scroll, setScroll] = useState(false);
     useEffect(() => {
         window.addEventListener("scroll", () => {
-            setScroll(window.scrollY > 300);
+            setScroll(window.scrollY > 0);
         });
         return () => {
             setScroll({});
