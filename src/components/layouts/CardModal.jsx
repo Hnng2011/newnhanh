@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-import { Modal } from "react-bootstrap";
+import { Modal } from 'react-bootstrap';
+
+
 
 const CardModal = (props) => {
 
@@ -10,7 +12,10 @@ const CardModal = (props) => {
             show={props.show}
             onHide={props.onHide}
         >
-            <Modal.Header closeButton ></Modal.Header>
+            <Modal.Header closeButton>
+                <Modal.Title>Xác nhận mua</Modal.Title>
+            </Modal.Header>
+
 
             <div className="modal-body space-y-20 pd-40">
                 <p className="label-1">Enter quantity. <span className="color-popup">5 available</span>

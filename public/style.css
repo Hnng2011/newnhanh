@@ -514,6 +514,7 @@ input::-moz-focus-inner {
   padding: 0;
 }
 
+
 /* Remove chrome yellow autofill */
 input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0px 1000px #f7f7f7 inset;
@@ -530,6 +531,7 @@ input[type=search]::-webkit-search-results-button,
 input[type=search]::-webkit-search-results-decoration {
   display: none;
 }
+
 
 /* Contact Form 7 */
 .wpcf7-form select,
@@ -676,7 +678,6 @@ input[type=reset]:focus,
 input[type=reset]:hover,
 input[type=submit]:focus,
 input[type=submit]:hover {
-  outline: 0;
   opacity: 0.8;
 }
 
@@ -1870,3 +1871,7 @@ header.absolute {
   }
 }
 
+.btn-close {
+  background-image: url('/public/icons8-close.svg') !important;
+  background-color: transparent;
+}
