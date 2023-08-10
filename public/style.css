@@ -1881,3 +1881,10 @@ header.absolute {
   padding-bottom: 32px;
 }
 
+.sell-btn {
+  border-radius: 10px;
+  height: 50%;
+  height: 60px;
+  font-size: 1em;
+  }
+

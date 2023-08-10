@@ -1,36 +1,46 @@
-import React from 'react';
-
+import React, { useState } from 'react';
+import CardModal from '../components/layouts/CardModal';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import { Link } from 'react-router-dom';
 import img from '../assets/images/background/thumb-pagetitle.jpg'
 import avt from '../assets/images/author/author-db.jpg'
 import avt2 from '../assets/images/author/history-at2.jpg'
 import avt4 from '../assets/images/author/history-at4.jpg'
-import imgp1 from '../assets/images/product/product27.jpg'
-import imgp2 from '../assets/images/product/product4.jpg'
-import imgp3 from '../assets/images/product/product5.jpg'
-import imgp4 from '../assets/images/product/product9.jpg'
-import imgp5 from '../assets/images/product/product10.jpg'
-import imgp6 from '../assets/images/product/product11.jpg'
 import imgp7 from '../assets/images/product/product6.jpg'
 import avtp1 from '../assets/images/author/avt-fv1.jpg'
-import avtp2 from '../assets/images/author/avt-fv2.jpg'
-import avtp3 from '../assets/images/author/avt-fv3.jpg'
-import avtp4 from '../assets/images/author/avt-fv4.jpg'
-import avtp5 from '../assets/images/author/avt-fv5.jpg'
-import avtp6 from '../assets/images/author/avt-fv6.jpg'
-import avtp7 from '../assets/images/author/avt-fv7.jpg'
 
 
-
-
-
-
-Dashboard.propTypes = {
-
-};
+const invent = [
+    {
+        id: 0,
+        name: 'Sweet Baby #1',
+        author: 'Polly Walter',
+        quantity: 5
+    },
+    {
+        id: 1,
+        name: 'Swee Baby #2',
+        author: 'Polly Walter',
+        quantity: 4
+    },
+    {
+        id: 2,
+        name: 'Sweet Bab #3',
+        author: 'Polly Walter',
+        quantity: 3
+    }
+]
 
 function Dashboard(props) {
+
+    const [modalShow, setModalShow] = useState(false);
+    const [mode, setMode] = useState('')
+
+    const setSell = () => {
+        setModalShow(true)
+        setMode('sell')
+    }
+
     return (
         <div>
 
@@ -97,154 +107,45 @@ function Dashboard(props) {
                                             <div className="title-ranking">
                                                 <div className="col-rankingg"><Link to="#">Name</Link></div>
                                                 <div className="col-rankingg"><Link to="#">Author</Link></div>
-                                                <div className="col-rankingg"><Link to="#">Price</Link></div>
+                                                <div className="col-rankingg"><Link to="#">Quantity</Link></div>
                                             </div>
                                         </div>
                                         <div className="table-ranking ">
-                                            <div className="content-ranking">
-                                                <div className="col-rankingg">
-                                                    <div className="box-product-favorite">
-                                                        <Link to="#" className="bookmark"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                                                            <path d="M12.7617 2.25H5.23828C4.42969 2.25 3.76172 2.91797 3.76172 3.76172V15.75L9 13.5L14.2383 15.75V3.76172C14.2383 2.91797 13.5703 2.25 12.7617 2.25Z" fill="#3749E9" />
-                                                        </svg></Link>
-                                                        <div className="image"><img src={imgp7} alt="Binasea" /></div>
-                                                        <Link to="#" className="name">Sweet Baby #1</Link>
-                                                    </div>
-                                                </div>
+                                            {
+                                                invent.map((data) => {
+                                                    return (
+                                                        <div key={data.id} className="content-ranking">
+                                                            <div className="col-rankingg">
+                                                                <div className="box-product-favorite">
+                                                                    <Link to="#" className="bookmark"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                                                        <path d="M12.7617 2.25H5.23828C4.42969 2.25 3.76172 2.91797 3.76172 3.76172V15.75L9 13.5L14.2383 15.75V3.76172C14.2383 2.91797 13.5703 2.25 12.7617 2.25Z" fill="#3749E9" />
+                                                                    </svg></Link>
+                                                                    <div className="image"><img src={imgp7} alt="Binasea" /></div>
+                                                                    <Link to="#" className="name">{data.name}</Link>
+                                                                </div>
+                                                            </div>
 
-                                                <div className="col-rankingg"><div className="author-pd">
-                                                    <div className="avatar">
-                                                        <img src={avtp1} alt="images" />
-                                                    </div>
-                                                    <Link to="#" className="name">Fabian Johnson</Link>
-                                                </div></div>
-                                                <div className="col-rankingg">0.45 SPM</div>
-                                                <div className="dot"><Link to="#"><i className="fas fa-ellipsis-h"></i></Link></div>
-                                            </div>
-                                            <div className="content-ranking">
-                                                <div className="col-rankingg">
-                                                    <div className="box-product-favorite">
-                                                        <Link to="#" className="bookmark"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                                                            <path d="M12.7617 2.25H5.23828C4.42969 2.25 3.76172 2.91797 3.76172 3.76172V15.75L9 13.5L14.2383 15.75V3.76172C14.2383 2.91797 13.5703 2.25 12.7617 2.25Z" fill="#3749E9" />
-                                                        </svg></Link>
-                                                        <div className="image"><img src={imgp1} alt="Binasea" /></div>
-                                                        <Link to="#" className="name">Doug Ortega #1</Link>
-                                                    </div>
-                                                </div>
-                                                <div className="col-rankingg"><div className="author-pd">
-                                                    <div className="avatar">
-                                                        <img src={avtp2} alt="images" />
-                                                    </div>
-                                                    <Link to="#" className="name">Polly Walters</Link>
-                                                </div></div>
-                                                <div className="col-rankingg">0.45 SPM</div>
-                                                <div className="dot"><Link to="#"><i className="fas fa-ellipsis-h"></i></Link></div>
-                                            </div>
-                                            <div className="content-ranking">
-                                                <div className="col-rankingg">
-                                                    <div className="box-product-favorite">
-                                                        <Link to="#" className="bookmark"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                                                            <path d="M12.7617 2.25H5.23828C4.42969 2.25 3.76172 2.91797 3.76172 3.76172V15.75L9 13.5L14.2383 15.75V3.76172C14.2383 2.91797 13.5703 2.25 12.7617 2.25Z" fill="#3749E9" />
-                                                        </svg></Link>
-                                                        <div className="image"><img src={imgp2} alt="Binasea" /></div>
-                                                        <Link to="#" className="name">Vincent Welch #1</Link>
-                                                    </div>
-                                                </div>
+                                                            <div className="col-rankingg"><div className="author-pd">
+                                                                <div className="avatar">
+                                                                    <img src={avtp1} alt="images" />
+                                                                </div>
+                                                                <Link to="#" className="name">{data.author}</Link>
+                                                            </div></div>
 
-                                                <div className="col-rankingg"><div className="author-pd">
-                                                    <div className="avatar">
-                                                        <img src={avtp3} alt="images" />
-                                                    </div>
-                                                    <Link to="#" className="name">Basil Slater</Link>
-                                                </div></div>
-                                                <div className="col-rankingg">0.45 SPM</div>
-                                                <div className="dot"><Link to="#"><i className="fas fa-ellipsis-h"></i></Link></div>
-                                            </div>
-                                            <div className="content-ranking">
-                                                <div className="col-rankingg">
-                                                    <div className="box-product-favorite">
-                                                        <Link to="#" className="bookmark"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                                                            <path d="M12.7617 2.25H5.23828C4.42969 2.25 3.76172 2.91797 3.76172 3.76172V15.75L9 13.5L14.2383 15.75V3.76172C14.2383 2.91797 13.5703 2.25 12.7617 2.25Z" fill="#3749E9" />
-                                                        </svg></Link>
-                                                        <div className="image"><img src={imgp3} alt="Binasea" /></div>
-                                                        <Link to="#" className="name">Alec Alvarado #1</Link>
-                                                    </div>
-                                                </div>
+                                                            <div className="col-rankingg">
+                                                                {data.quantity}
+                                                            </div>
 
-                                                <div className="col-rankingg"><div className="author-pd">
-                                                    <div className="avatar">
-                                                        <img src={avtp4} alt="images" />
-                                                    </div>
-                                                    <Link to="#" className="name">Mirabelle Maldonado</Link>
-                                                </div></div>
-                                                <div className="col-rankingg">0.45 SPM</div>
-                                                <div className="dot"><Link to="#"><i className="fas fa-ellipsis-h"></i></Link></div>
-                                            </div>
-                                            <div className="content-ranking">
-                                                <div className="col-rankingg">
-                                                    <div className="box-product-favorite">
-                                                        <Link to="#" className="bookmark"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                                                            <path d="M12.7617 2.25H5.23828C4.42969 2.25 3.76172 2.91797 3.76172 3.76172V15.75L9 13.5L14.2383 15.75V3.76172C14.2383 2.91797 13.5703 2.25 12.7617 2.25Z" fill="#3749E9" />
-                                                        </svg></Link>
-                                                        <div className="image"><img src={imgp4} alt="Binasea" /></div>
-                                                        <Link to="#" className="name">Baz Fletcher #1</Link>
-                                                    </div>
-                                                </div>
 
-                                                <div className="col-rankingg"><div className="author-pd">
-                                                    <div className="avatar">
-                                                        <img src={avtp5} alt="images" />
-                                                    </div>
-                                                    <Link to="#" className="name">Roderick Boyd</Link>
-                                                </div></div>
-                                                <div className="col-rankingg">0.45 SPM</div>
-                                                <div className="dot"><Link to="#"><i className="fas fa-ellipsis-h"></i></Link></div>
-                                            </div>
-                                            <div className="content-ranking">
-                                                <div className="col-rankingg">
-                                                    <div className="box-product-favorite">
-                                                        <Link to="#" className="bookmark"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                                                            <path d="M12.7617 2.25H5.23828C4.42969 2.25 3.76172 2.91797 3.76172 3.76172V15.75L9 13.5L14.2383 15.75V3.76172C14.2383 2.91797 13.5703 2.25 12.7617 2.25Z" fill="#3749E9" />
-                                                        </svg></Link>
-                                                        <div className="image"><img src={imgp5} alt="Binasea" /></div>
-                                                        <Link to="#" className="name">Bert Moore #1</Link>
-                                                    </div>
-                                                </div>
 
-                                                <div className="col-rankingg"><div className="author-pd">
-                                                    <div className="avatar">
-                                                        <img src={avtp6} alt="images" />
-                                                    </div>
-                                                    <Link to="#" className="name">Lucy Neal</Link>
-                                                </div></div>
-                                                <div className="col-rankingg">0.45 SPM</div>
-                                                <div className="dot"><Link to="#"><i className="fas fa-ellipsis-h"></i></Link></div>
-                                            </div>
-                                            <div className="content-ranking">
-                                                <div className="col-rankingg">
-                                                    <div className="box-product-favorite">
-                                                        <Link to="#" className="bookmark"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                                                            <path d="M12.7617 2.25H5.23828C4.42969 2.25 3.76172 2.91797 3.76172 3.76172V15.75L9 13.5L14.2383 15.75V3.76172C14.2383 2.91797 13.5703 2.25 12.7617 2.25Z" fill="#3749E9" />
-                                                        </svg></Link>
-                                                        <div className="image"><img src={imgp6} alt="Binasea" /></div>
-                                                        <Link to="#" className="name">Oriel Binder #1</Link>
-                                                    </div>
-                                                </div>
-
-                                                <div className="col-rankingg"><div className="author-pd">
-                                                    <div className="avatar">
-                                                        <img src={avtp7} alt="images" />
-                                                    </div>
-                                                    <Link to="#" className="name">Hazel Middleton</Link>
-                                                </div></div>
-                                                <div className="col-rankingg">0.45 SPM</div>
-                                                <div className="dot"><Link to="#"><i className="fas fa-ellipsis-h"></i></Link></div>
-                                            </div>
-                                            <div className="table-btn">
-                                                <Link to="#">Load more</Link>
-                                            </div>
+                                                            <Link to="#"><button onClick={() => setSell()} className='sell-btn'>Sell</button></Link>
+                                                        </div>
+                                                    )
+                                                })
+                                            }
                                         </div>
-                                    </div></TabPanel>
+                                    </div>
+                                    </TabPanel>
 
                                     <TabPanel><div className="inner-content history">
                                         <h4 className="title-dashboard">History</h4>
@@ -416,7 +317,14 @@ function Dashboard(props) {
                 </div >
             </section >
 
+            <CardModal
+                show={modalShow}
+                mode={mode}
+                onHide={() => { setModalShow(false); setMode('') }}
+            />
         </div >
+
+
     );
 }
 
