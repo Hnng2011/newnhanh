@@ -120,7 +120,7 @@ function Dashboard(props) {
                                                                     <Link to="#" className="bookmark"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
                                                                         <path d="M12.7617 2.25H5.23828C4.42969 2.25 3.76172 2.91797 3.76172 3.76172V15.75L9 13.5L14.2383 15.75V3.76172C14.2383 2.91797 13.5703 2.25 12.7617 2.25Z" fill="#3749E9" />
                                                                     </svg></Link>
-                                                                    <div className="image"><img src={imgp7} alt="Binasea" /></div>
+                                                                    <div className="image"><img src={imgp7} alt="Splittingme" /></div>
                                                                     <Link to="#" className="name">{data.name}</Link>
                                                                 </div>
                                                             </div>
