@@ -1,7 +1,5 @@
 import React from 'react';
 import PageTitle from '../components/pagetitle/PageTitle';
-import img1 from '../assets/images/img-banner-explore.png'
-import img2 from '../assets/images/img-banner-live-auction-2.png'
 import HotPick from '../components/hotpick/HotPick';
 import dataHotpick from '../assets/fake-data/data-hotpick';
 

@@ -293,7 +293,7 @@
   border: unset;
 }
 .modal .modal-dialog .modal-content .modal-body {
-  padding: 60px 39px;
+  padding: 20px 19px;
   border-radius: 20px;
 }
 .modal .modal-dialog .modal-content .modal-body h3 {
@@ -328,7 +328,7 @@
   color: #B9B8BB;
 }
 .modal .modal-dialog .modal-content .modal-body .label-1 {
-  margin: 20px 0;
+  margin: 10px 0;
 }
 .modal .modal-dialog .modal-content .modal-body .form-bottom {
   margin-bottom: 30px;
@@ -1882,7 +1882,7 @@
 }
 .dashboard-content.inventory .inner-content .table-ranking .table-btn a {
   display: inline-block;
-  background: rgba(55, 73, 233, 0.1);
+  background: transparent;
   border-radius: 50px;
   padding: 8px 23px;
   font-family: "DM Sans";
@@ -2211,7 +2211,7 @@
   margin-top: 52px;
 }
 .table-btn a {
-  background: rgba(55, 73, 233, 0.1);
+  background: transparent;
   border-radius: 50px;
   padding: 12px 23px 12px 23px;
   font-family: "DM Sans";

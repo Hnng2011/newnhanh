@@ -15,9 +15,13 @@ const menus = [
         links: '/ranking',
     },
 
-
     {
         id: 4,
+        name: 'Pool',
+        links: '/pool',
+    },
+    {
+        id: 5,
         name: 'Contact',
         links: '/contact',
     },

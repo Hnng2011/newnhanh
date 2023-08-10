@@ -1,0 +1,81 @@
+.grid-container {
+    display: grid;
+    width: 80%;
+    grid-template-columns: 100%;
+    margin: 3% auto;
+    justify-content: center;
+    border-radius: 20px;
+    overflow: hidden;
+    color: #FFFFFF;
+    font-family: "DM Sans";
+    font-weight: 400;
+}
+
+.grid-items {
+    width: 100%;
+    background-color: #35353B;
+    display: flex;
+    height: 80px;
+    align-items: center;
+    text-align: center;
+    border-bottom: 1px solid #B3B3B3;
+}
+
+.grid-items:last-child {
+    border-bottom: none;
+}
+
+.grid-item {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-size: 18px;
+    gap: 2%;
+}
+
+.grid-item:first-child , .grid-item:last-child{
+    flex-direction: row;
+    font-size: 14px;
+}
+
+.grid-item:last-child{ 
+    gap: 6%;
+}
+
+.grid-item .imaging{
+    height: 50%;
+    aspect-ratio: 1 / 1;
+    background-color: gray;
+    border-radius: 50%;
+
+}
+
+.grid-item .title {
+    font-size: 13px;
+    color: rgb(165, 165, 165);
+    font-family: "DM Sans";
+    font-weight: 700;
+}
+
+.stake , .harvest {
+    width: 40%;
+    height: 50%;
+    font-size: 13px;
+    padding: 0;
+    margin: 0;
+    border-radius: 10px;
+}
+
+.harvest {
+    color: yellow;
+    background: transparent;
+    outline: 2px solid yellow;
+}
+
+.harvest:hover {
+    background-color: yellow;
+    color: black;
+}

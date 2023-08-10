@@ -2,88 +2,11 @@ import React, { useState, useEffect } from 'react';
 import './styles.scss';
 import { Link } from 'react-router-dom';
 
-import logo from '../../assets/images/logo/logo.png';
-import logodark from '../../assets/images/logo/logo_dark.png';
-
 import './styles.scss'
 
 
 
-function Footer(props) {
-
-    const [productLink] = useState([
-        {
-            title: 'Spot',
-            path: '/spot'
-        },
-        {
-            title: 'Inverse Perpetual',
-            path: '#'
-        },
-        {
-            title: 'USDT Perpetual',
-            path: '#'
-        },
-        {
-            title: 'Exchange',
-            path: '#'
-        },
-        {
-            title: 'Launchpad',
-            path: '#'
-        },
-        {
-            title: 'Binance Pay',
-            path: '#'
-        },
-    ]);
-    const [servicesLink] = useState([
-        {
-            title: 'Buy Crypto',
-            path: '#'
-        },
-        {
-            title: 'Markets',
-            path: '#'
-        },
-        {
-            title: 'Tranding Fee',
-            path: '#'
-        },
-        {
-            title: 'Affiliate Program',
-            path: '#'
-        },
-        {
-            title: 'Referral Program',
-            path: '#'
-        },
-        {
-            title: 'API',
-            path: '#'
-        },
-    ]);
-
-
-    const [listSocial] = useState([
-        {
-            icon: 'icon-facebook-f',
-            path: '#'
-        },
-        {
-            icon: 'icon-instagram',
-            path: '#'
-        },
-        {
-            icon: 'icon-youtube',
-            path: '#'
-        },
-        {
-            icon: 'icon-twitter',
-            path: '#'
-        },
-    ])
-
+function Footer() {
 
     const [isVisible, setIsVisible] = useState(false);
 
@@ -118,7 +41,7 @@ function Footer(props) {
                             <div className="logo">
                                 <div>SplittingMe</div>
                             </div>
-                            <p className="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+
                             <ul className="social-item">
                                 <li><Link to="#"><i className="fab fa-twitter"></i></Link></li>
                                 <li><Link to="#"><i className="fab fa-facebook"></i></Link></li>

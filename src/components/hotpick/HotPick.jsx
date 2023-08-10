@@ -20,7 +20,7 @@ function HotPick(props) {
         <section className="tf-hot-pick">
             <div className="tf-container">
                 <div className="row ">
-                    <div className="col-md-12">
+                    <div className="col-md-12 pd32">
                         <div className="tf-heading wow fadeInUp">
                             <h4 className="heading">Hot Picks</h4>
                         </div>

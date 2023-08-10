@@ -4,12 +4,8 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import { Link } from 'react-router-dom';
 import img from '../assets/images/background/thumb-pagetitle.jpg'
 import avt from '../assets/images/author/author-db.jpg'
-import avt1 from '../assets/images/author/history-at1.jpg'
 import avt2 from '../assets/images/author/history-at2.jpg'
-import avt3 from '../assets/images/author/history-at3.jpg'
 import avt4 from '../assets/images/author/history-at4.jpg'
-import avt5 from '../assets/images/author/history-at5.jpg'
-import avt6 from '../assets/images/author/history-at6.jpg'
 import imgp1 from '../assets/images/product/product27.jpg'
 import imgp2 from '../assets/images/product/product4.jpg'
 import imgp3 from '../assets/images/product/product5.jpg'
@@ -92,7 +88,7 @@ function Dashboard(props) {
 
                                 </div>
                             </div>
-                            <div className="col-xl-9 col-lg-12 col-md-12 overflow-table">
+                            <div className="col-xl-9 col-lg-12 col-md-12 overSPM-table">
 
                                 <div className="dashboard-content inventory content-tab">
                                     <TabPanel><div className="inner-content inventory favorite">
@@ -122,7 +118,7 @@ function Dashboard(props) {
                                                     </div>
                                                     <Link to="#" className="name">Fabian Johnson</Link>
                                                 </div></div>
-                                                <div className="col-rankingg">0.45 Flow</div>
+                                                <div className="col-rankingg">0.45 SPM</div>
                                                 <div className="dot"><Link to="#"><i className="fas fa-ellipsis-h"></i></Link></div>
                                             </div>
                                             <div className="content-ranking">
@@ -141,7 +137,7 @@ function Dashboard(props) {
                                                     </div>
                                                     <Link to="#" className="name">Polly Walters</Link>
                                                 </div></div>
-                                                <div className="col-rankingg">0.45 Flow</div>
+                                                <div className="col-rankingg">0.45 SPM</div>
                                                 <div className="dot"><Link to="#"><i className="fas fa-ellipsis-h"></i></Link></div>
                                             </div>
                                             <div className="content-ranking">
@@ -161,7 +157,7 @@ function Dashboard(props) {
                                                     </div>
                                                     <Link to="#" className="name">Basil Slater</Link>
                                                 </div></div>
-                                                <div className="col-rankingg">0.45 Flow</div>
+                                                <div className="col-rankingg">0.45 SPM</div>
                                                 <div className="dot"><Link to="#"><i className="fas fa-ellipsis-h"></i></Link></div>
                                             </div>
                                             <div className="content-ranking">
@@ -181,7 +177,7 @@ function Dashboard(props) {
                                                     </div>
                                                     <Link to="#" className="name">Mirabelle Maldonado</Link>
                                                 </div></div>
-                                                <div className="col-rankingg">0.45 Flow</div>
+                                                <div className="col-rankingg">0.45 SPM</div>
                                                 <div className="dot"><Link to="#"><i className="fas fa-ellipsis-h"></i></Link></div>
                                             </div>
                                             <div className="content-ranking">
@@ -201,7 +197,7 @@ function Dashboard(props) {
                                                     </div>
                                                     <Link to="#" className="name">Roderick Boyd</Link>
                                                 </div></div>
-                                                <div className="col-rankingg">0.45 Flow</div>
+                                                <div className="col-rankingg">0.45 SPM</div>
                                                 <div className="dot"><Link to="#"><i className="fas fa-ellipsis-h"></i></Link></div>
                                             </div>
                                             <div className="content-ranking">
@@ -221,7 +217,7 @@ function Dashboard(props) {
                                                     </div>
                                                     <Link to="#" className="name">Lucy Neal</Link>
                                                 </div></div>
-                                                <div className="col-rankingg">0.45 Flow</div>
+                                                <div className="col-rankingg">0.45 SPM</div>
                                                 <div className="dot"><Link to="#"><i className="fas fa-ellipsis-h"></i></Link></div>
                                             </div>
                                             <div className="content-ranking">
@@ -241,7 +237,7 @@ function Dashboard(props) {
                                                     </div>
                                                     <Link to="#" className="name">Hazel Middleton</Link>
                                                 </div></div>
-                                                <div className="col-rankingg">0.45 Flow</div>
+                                                <div className="col-rankingg">0.45 SPM</div>
                                                 <div className="dot"><Link to="#"><i className="fas fa-ellipsis-h"></i></Link></div>
                                             </div>
                                             <div className="table-btn">

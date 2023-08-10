@@ -18,7 +18,7 @@ const CardModal = (props) => {
 
 
             <div className="modal-body space-y-20 pd-40">
-                <p className="label-1">Enter quantity. <span className="color-popup">5 available</span>
+                <p className="label-1">Enter quantity <span className="color-popup">- (5 / 5)</span>
                 </p>
                 <input type="text" className="form-control quantity form-bottom" />
                 <div className="d-flex justify-content-between detail-2">

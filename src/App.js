@@ -3,7 +3,6 @@ import AOS from 'aos';
 import { Route, Routes } from 'react-router-dom';
 import Header from './components/header';
 import Footer from './components/footer';
-import Home from './pages/Home';
 import routes from './pages';
 import Page404 from './pages/404';
 import '../src/assets/binasea.css';

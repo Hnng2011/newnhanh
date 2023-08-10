@@ -2,20 +2,11 @@ import React, { useState } from 'react';
 import PageTitle from '../components/pagetitle/PageTitle';
 import { Link } from 'react-router-dom';
 import img1 from '../assets/images/item-details.jpg'
-import avt1 from '../assets/images/author/author-detail-3.png'
-import data from '../assets/fake-data/data-hotpick'
-import icon1 from '../assets/images/icon/rain1.svg'
-import icon2 from '../assets/images/icon/rain2.svg'
-import icon3 from '../assets/images/icon/ethe.svg'
+
 import CardModal from '../components/layouts/CardModal';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import avtd1 from '../assets/images/author/author-detail-1.png'
-import avtd2 from '../assets/images/author/author-detail-2.png'
-import avtd3 from '../assets/images/author/authour-bid-1.png'
-import avtd4 from '../assets/images/author/authour-bid-2.png'
-import avtd5 from '../assets/images/author/authour-bid-3.png'
-import avtd6 from '../assets/images/author/author-history-1.jpg'
-import avtd7 from '../assets/images/author/author-history-2.jpg'
+
 
 
 
@@ -37,8 +28,7 @@ function ItemDetails02(props) {
     return (
         <div>
 
-            <PageTitle sub='Explore' title='Item Details 2' />
-
+            <PageTitle sub='Explore' title='Item Details' />
             <section className="tf-item-detail">
                 <div className="tf-container">
                     <div className="row">
@@ -56,7 +46,7 @@ function ItemDetails02(props) {
                                     <p className="except">A Collection Of 10,000 Undead NFTs Minted On The Ethereum Blockchain. Each Unique Deadfella Is Randomly Generated From A Combination.</p>
                                     <div className="current-bid">
                                         <div className="countdown style-2">
-                                            <span className="js-countdown" data-timer="5555555" data-labels="  :,   :,  :, "></span>
+                                            <span className="js-countdown">Available: 50</span>
                                         </div>
                                         <div className="change-price">
                                             <span className="title">Current Price</span>
@@ -98,8 +88,8 @@ function ItemDetails02(props) {
                                     <div className="content-bottom">
 
                                         <div className="button">
-                                            <Link to="#" className="tf-button" data-toggle="modal" data-target="#popup_bid">Purchase</Link>
-                                            <Link to="#" className="tf-button">Offer</Link>
+                                            <Link to="#" className="tf-button" onClick={() => setModalShow(true)}>Purchase</Link>
+                                            <Link to="#" className="tf-button" onClick={() => setModalShow(true)}>Offer</Link>
                                         </div>
                                     </div>
                                 </div>

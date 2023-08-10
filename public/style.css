@@ -1686,7 +1686,7 @@ header.absolute {
 /* Footer
 -------------------------------------------------------------- */
 .footer {
-  padding: 100px 0;
+  padding: 30px 0;
   background-color: var(--primary-color9);
 }
 
@@ -1875,3 +1875,8 @@ header.absolute {
   background-image: url('/public/icons8-close.svg') !important;
   background-color: transparent;
 }
+
+.pd32 {
+  padding-bottom: 32px;
+}
+

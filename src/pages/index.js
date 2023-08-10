@@ -4,12 +4,15 @@ import Explore from "./Explore02";
 import Home from "./Home";
 import Ranking from "./Ranking";
 import Wallet from "./Wallet";
+import Pool from "./pool";
 import ItemDetails from "./ItemDetails";
+
 
 
 
 const routes = [
   { path: '/', component: <Home /> },
+  { path: 'pool', component: <Pool /> },
   { path: '/explore', component: <Explore /> },
   { path: '/dashboard', component: <Dashboard /> },
   { path: '/ranking', component: <Ranking /> },
