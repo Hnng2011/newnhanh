@@ -280,12 +280,14 @@
   background: rgba(25, 24, 32, 0.8);
   backdrop-filter: blur(10px);
   z-index: 99999;
+  overflow: hidden;
 }
 .modal .modal-dialog {
   max-width: 690px;
   border-radius: 20px;
   overflow: hidden;
-  margin: 150px auto;
+  margin: 100px auto;
+  overflow: hidden;
 }
 .modal .modal-dialog .modal-content {
   background: var(--product-color8);
@@ -295,6 +297,7 @@
 .modal .modal-dialog .modal-content .modal-body {
   padding: 20px 19px;
   border-radius: 20px;
+ 
 }
 .modal .modal-dialog .modal-content .modal-body h3 {
   font-family: "DM Sans";
@@ -1082,7 +1085,7 @@
 /* Ranking 
 --------------------------------------------------*/
 .tf-ranking {
-  padding: 26px 0 80px;
+  padding: 26px 0 10px;
   min-height: 60vh;
 }
 .tf-ranking .top-menu {
@@ -1098,7 +1101,7 @@
 
 .tf-ranking .tf-pagination {
   text-align: center;
-  margin-top: 50px;
+  margin: 30px 0;
 }
 .tf-ranking .tf-pagination .tf-button {
   background: transparent;

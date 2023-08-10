@@ -12,6 +12,12 @@ import avtd1 from '../assets/images/author/author-detail-1.png'
 
 function ItemDetails02(props) {
     const [modalShow, setModalShow] = useState(false);
+    const [mode, setMode] = useState(false)
+
+    const setOffer = () => {
+        setModalShow(true)
+        setMode(true)
+    }
 
     const [tabDetails] = useState([
         {
@@ -23,6 +29,46 @@ function ItemDetails02(props) {
         }
     ])
 
+    const [tabBid] = useState([
+        {
+            id: 1,
+            price: '1.35 ETH',
+            name: 'carlisle',
+            time: '3/26/2022, 7:28 AM'
+        },
+        {
+            id: 2,
+            price: '1.35 ETH',
+            name: 'carlisle',
+            time: '3/26/2022, 7:28 AM'
+        },
+        {
+            id: 3,
+            price: '1.35 ETH',
+            name: 'carlisle',
+            time: '3/26/2022, 7:28 AM'
+        },
+        {
+            id: 4,
+            price: '1.35 ETH',
+            name: 'carlisle',
+            time: '3/26/2022, 7:28 AM'
+        },
+        {
+            id: 5,
+            price: '1.35 ETH',
+            name: 'carlisle',
+            time: '3/26/2022, 7:28 AM'
+        },
+        {
+            id: 6,
+            price: '1.35 ETH',
+            name: 'carlisle',
+            time: '3/26/2022, 7:28 AM'
+        },
+
+
+    ])
 
 
     return (
@@ -59,6 +105,7 @@ function ItemDetails02(props) {
                                     <Tabs className="tf-tab">
                                         <TabList className="menu-tab ">
                                             <Tab className="tab-title active"><Link to="#">Details</Link></Tab>
+                                            <Tab className="tab-title active"><Link to="#">Offer</Link></Tab>
                                         </TabList>
 
                                         <TabPanel >
@@ -82,6 +129,27 @@ function ItemDetails02(props) {
                                             </div>
                                         </TabPanel>
 
+                                        <TabPanel >
+                                            <ul className="tab-bid">
+                                                {
+                                                    tabBid.map(idx => (
+                                                        <li key={idx.id}>
+                                                            <div className="box-bid">
+                                                                <div className="image-bid">
+                                                                    <img src={idx.avt} alt="Splittingme" />
+                                                                </div>
+                                                                <div className="infor">
+                                                                    <div className="history"><span className="price">{idx.price}</span> by <span className="name">{idx.name}</span></div>
+                                                                    <div className="time">{idx.time}</div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    ))
+                                                }
+
+                                            </ul>
+                                        </TabPanel>
+
 
                                     </Tabs>
 
@@ -89,7 +157,7 @@ function ItemDetails02(props) {
 
                                         <div className="button">
                                             <Link to="#" className="tf-button" onClick={() => setModalShow(true)}>Purchase</Link>
-                                            <Link to="#" className="tf-button" onClick={() => setModalShow(true)}>Offer</Link>
+                                            <Link to="#" className="tf-button" onClick={() => setOffer()}>Offer</Link>
                                         </div>
                                     </div>
                                 </div>
@@ -105,9 +173,9 @@ function ItemDetails02(props) {
 
             <CardModal
                 show={modalShow}
-                onHide={() => setModalShow(false)}
+                mode={mode}
+                onHide={() => { setModalShow(false); setMode(false) }}
             />
-
 
         </div >
     );
