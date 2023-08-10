@@ -146,7 +146,6 @@ function ItemDetails02(props) {
                                                         </li>
                                                     ))
                                                 }
-
                                             </ul>
                                         </TabPanel>
 
