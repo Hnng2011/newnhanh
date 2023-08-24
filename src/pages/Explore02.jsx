@@ -6,30 +6,7 @@ import dataHotpick from '../assets/fake-data/data-hotpick';
 function Explore02(props) {
     return (
         <div className='page-explore'>
-            <PageTitle title='Explore' />
-
-            <section className="tf-baner-live-auction style-2">
-                <div className="tf-container">
-                    <div className="row">
-                        <div className="col-md-12">
-                            <div className="banner-liver-auction-wrap">
-                                <div className="content">
-                                    <div className="heading">
-                                        <h2 className="title">Big Boss #1238</h2>
-                                        <span className="label">Coming soon</span>
-                                    </div>
-                                    <div className="price">
-                                        <span className="icon"><i className="fab fa-ethereum"></i></span>
-                                        <span>5 ETH</span>
-                                    </div>
-                                    <p className="sub-heading">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <PageTitle title='Marketplace' />
 
             <HotPick data={dataHotpick} />
 

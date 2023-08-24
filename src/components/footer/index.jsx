@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './styles.scss';
 import { Link } from 'react-router-dom';
-
+import imgsrc from '../../assets/images/logo/logo.png'
 import './styles.scss'
 
 
@@ -38,9 +38,9 @@ function Footer() {
                 <div className="row">
                     <div className="col-xl-4 col-lg-3 col-md-3">
                         <div className="widget widget-infor">
-                            <div className="logo">
-                                <div>SplittingMe</div>
-                            </div>
+                            <img className="logo" id='logo_header' src={imgsrc} />
+
+
 
                             <ul className="social-item">
                                 <li><Link to="#"><i className="fab fa-twitter"></i></Link></li>

@@ -13,7 +13,7 @@ const CardModal = (props) => {
             onHide={props.onHide}
         >
             <Modal.Header closeButton>
-                <Modal.Title>Xác nhận mua</Modal.Title>
+                <Modal.Title>Xác nhận</Modal.Title>
             </Modal.Header>
 
 

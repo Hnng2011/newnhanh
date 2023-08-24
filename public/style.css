@@ -860,7 +860,6 @@ label.error {
   padding-left: 15px;
   width: 1440px;
   max-width: 100%;
-  overflow: hidden;
 }
 
 .mb63 {
@@ -1202,11 +1201,11 @@ header.absolute {
 
 #main-nav > ul > li {
   float: left;
-  padding: 31px 30px 31px 13px;
+  padding: 21px 20px 21px 3px;
 }
 #main-nav > ul > li > a {
   position: relative;
-  font-size: 18px;
+  font-size: 12px;
   line-height: 26px;
   font-weight: 700;
   display: block;
@@ -1877,6 +1876,10 @@ header.absolute {
   background-color: transparent;
 }
 
+
+
+
+/*Custom CSS*/
 .pd32 {
   padding-bottom: 32px;
 }
@@ -1884,7 +1887,14 @@ header.absolute {
 .sell-btn {
   border-radius: 10px;
   height: 50%;
-  height: 60px;
   font-size: 1em;
+  margin-left: 18vw;
   }
+
+#logo_header{
+  height: 8vh;
+  width: 8vh;
+  object-fit: cover;
+  border-radius: 10px;
+}
 

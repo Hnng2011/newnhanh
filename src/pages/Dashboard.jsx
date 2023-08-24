@@ -76,6 +76,7 @@ function Dashboard(props) {
                                         </div>
                                         <div className="name">Francisco Maia</div>
                                         <div className="pax">0x59485…82590</div>
+                                        <div className="pax">Your SPM Balance: 78</div>
                                     </div>
                                     <TabList className='filter-menuu menu-tab'>
 
@@ -106,8 +107,8 @@ function Dashboard(props) {
                                         <div className="table-ranking top">
                                             <div className="title-ranking">
                                                 <div className="col-rankingg"><Link to="#">Name</Link></div>
-                                                <div className="col-rankingg"><Link to="#">Author</Link></div>
                                                 <div className="col-rankingg"><Link to="#">Quantity</Link></div>
+
                                             </div>
                                         </div>
                                         <div className="table-ranking ">
@@ -125,20 +126,15 @@ function Dashboard(props) {
                                                                 </div>
                                                             </div>
 
-                                                            <div className="col-rankingg"><div className="author-pd">
-                                                                <div className="avatar">
-                                                                    <img src={avtp1} alt="images" />
-                                                                </div>
-                                                                <Link to="#" className="name">{data.author}</Link>
-                                                            </div></div>
 
                                                             <div className="col-rankingg">
                                                                 {data.quantity}
                                                             </div>
 
+                                                            <div className="col-rankingg">
+                                                                <Link to="#"><button onClick={() => setSell()} className='sell-btn'>Sell</button></Link>
+                                                            </div>
 
-
-                                                            <Link to="#"><button onClick={() => setSell()} className='sell-btn'>Sell</button></Link>
                                                         </div>
                                                     )
                                                 })

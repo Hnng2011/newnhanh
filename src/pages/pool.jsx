@@ -2,7 +2,10 @@ import React from 'react'
 import PageTitle from '../components/pagetitle/PageTitle';
 import Pool from '../components/pool/pool';
 
-const datas = [{ id: 0, name: 'BNB', APR: 5.56, Total: 118, Period: 30, url: 'https://w7.pngwing.com/pngs/997/942/png-transparent-bnb-crypto-cryptocurrency-cryptocurrencies-cash-money-bank-payment-icon.png', earn: 0 }, { id: 0, name: 'BNB', APR: 5.56, Total: 118, Period: 30, url: 'https://w7.pngwing.com/pngs/997/942/png-transparent-bnb-crypto-cryptocurrency-cryptocurrencies-cash-money-bank-payment-icon.png', earn: 0 }, { id: 1, name: 'BNB', APR: 5.56, Total: 118, Period: 30, url: 'https://w7.pngwing.com/pngs/997/942/png-transparent-bnb-crypto-cryptocurrency-cryptocurrencies-cash-money-bank-payment-icon.png', earn: 0 }]
+const datas = [
+    { id: 0, name: 'vNFT', APR: 5.56, Total: 118, Period: 30, url: 'https://w7.pngwing.com/pngs/997/942/png-transparent-bnb-crypto-cryptocurrency-cryptocurrencies-cash-money-bank-payment-icon.png', earn: 0 },
+    { id: 0, name: 'vNFT', APR: 5.56, Total: 118, Period: 30, url: 'https://w7.pngwing.com/pngs/997/942/png-transparent-bnb-crypto-cryptocurrency-cryptocurrencies-cash-money-bank-payment-icon.png', earn: 0 },
+    { id: 1, name: 'vNFT', APR: 5.56, Total: 118, Period: 30, url: 'https://w7.pngwing.com/pngs/997/942/png-transparent-bnb-crypto-cryptocurrency-cryptocurrencies-cash-money-bank-payment-icon.png', earn: 0 }]
 
 const pool = () => {
     return (

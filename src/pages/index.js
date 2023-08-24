@@ -6,6 +6,8 @@ import Ranking from "./Ranking";
 import Wallet from "./Wallet";
 import Pool from "./pool";
 import ItemDetails from "./ItemDetails";
+import Mint from "./mint";
+import MLM from "../components/mlm/mlm";
 
 
 
@@ -13,12 +15,14 @@ import ItemDetails from "./ItemDetails";
 const routes = [
   { path: '/', component: <Home /> },
   { path: 'pool', component: <Pool /> },
-  { path: '/explore', component: <Explore /> },
+  { path: '/marketplace', component: <Explore /> },
   { path: '/dashboard', component: <Dashboard /> },
-  { path: '/ranking', component: <Ranking /> },
+  { path: '/referal', component: <Ranking /> },
   { path: '/wallet', component: <Wallet /> },
   { path: '/contact', component: <Contact /> },
   { path: '/item-details', component: <ItemDetails /> },
+  { path: '/mint', component: <Mint /> },
+  { path: '/mlm', component: <MLM /> },
 ]
 
 export default routes;

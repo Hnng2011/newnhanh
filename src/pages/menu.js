@@ -6,13 +6,13 @@ const menus = [
     },
     {
         id: 2,
-        name: 'Explore',
-        links: '/explore'
+        name: 'Marketplace',
+        links: '/marketplace'
     },
     {
         id: 3,
-        name: 'Ranking',
-        links: '/ranking',
+        name: 'Referal',
+        links: '/referal',
     },
 
     {
@@ -25,6 +25,16 @@ const menus = [
         name: 'Contact',
         links: '/contact',
     },
+    {
+        id: 6,
+        name: 'Mint',
+        links: '/mint'
+    },
+    {
+        id: 7,
+        name: 'MLM',
+        links: '/mlm'
+    }
 
 ]
 

@@ -62,44 +62,23 @@ function Banner03(props) {
                                 }
 
                             </Swiper>
-                            <Swiper
-                                onSwiper={setThumbsSwiper}
-                                loop={true}
-                                spaceBetween={0}
-                                slidesPerView={1}
-                                freeMode={true}
-                                watchSlidesProgress={true}
 
-                                modules={[FreeMode, Thumbs]}
-                                className="mySwiper"
-                                autoplay={{
-                                    delay: 2500,
-                                    disableOnInteraction: true,
-                                }}
-                            >
-                                {
-                                    data.map(idx => (
-                                        <SwiperSlide key={idx.id}>
-                                            <div className="tf-slider-item style-3">
-                                                <div className="content-inner">
-                                                    <img src={shape1} alt="SplitingMe" className="img-star star-1 ani4" />
-                                                    <img src={shape2} alt="SplitingMe" className="img-star star-2 ani5" />
-                                                    <img src={shape3} alt="SplitingMe" className="img-star star-3 ani4" />
-                                                    <img src={shape4} alt="SplitingMe" className="img-star star-4 ani5" />
-                                                    <h1 className="heading">
-                                                        {idx.heading}
-                                                    </h1>
-                                                    <p className="sub-heading">{idx.desc}</p>
-                                                    <div className="btn-slider ">
-                                                        <Link to="/explore" className="tf-button style-6">Explore now</Link>
-                                                    </div>
-                                                </div>
+                        </div>
+                    </div>
+                </div>
 
-                                            </div>
-                                        </SwiperSlide>
-                                    ))
-                                }
-                            </Swiper>
+                <div className="tf-slider-item style-3">
+                    <div className="content-inner">
+                        <img src={shape1} alt="SplitingMe" className="img-star star-1 ani4" />
+                        <img src={shape2} alt="SplitingMe" className="img-star star-2 ani5" />
+                        <img src={shape3} alt="SplitingMe" className="img-star star-3 ani4" />
+                        <img src={shape4} alt="SplitingMe" className="img-star star-4 ani5" />
+                        <h1 className="heading">
+                            Spliting Me
+                        </h1>
+                        <p className="sub-heading">Giải pháp bất động sản hoàn toàn mới , lần đầu tiên có mặt tại Việt Nam</p>
+                        <div className="btn-slider ">
+                            <Link to="/marketplace" className="tf-button style-6">Explore now</Link>
                         </div>
                     </div>
                 </div>

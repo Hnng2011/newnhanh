@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
-
 import { Link, NavLink, useLocation } from 'react-router-dom';
-
+import imgscr from '../../assets/images/logo/logo.png'
 import menus from '../../pages/menu';
 import './styles.scss';
 
@@ -45,8 +44,7 @@ const Header = () => {
                             <div id="site-logo" className="clearfix">
                                 <div id="site-logo-inner">
                                     <Link to="/" rel="home" className="main-logo">
-                                        <div id="logo_header" className='logo-dark' >Splitting Me</div>
-
+                                        <img id="logo_header" className='logo-dark' src={imgscr} />
                                     </Link>
                                 </div>
                             </div>
@@ -56,7 +54,7 @@ const Header = () => {
                                     <ul id="menu-primary-menu" className="menu">
                                         {
                                             menus.map((data, idx) => (
-                                                <li key={idx} onClick={() => handleDropdown(idx)} className={`${location.pathname === data.links ? 'active' : ''} ${activeIndex === idx ? 'active' : ''}`}
+                                                <li key={idx} onClick={() => handleDropdown(idx)} className={`${location.pathname === data.links ? 'active' : ''}`}
 
                                                 >
 

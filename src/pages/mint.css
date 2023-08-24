@@ -1,0 +1,161 @@
+.mint_container {
+    margin: 2% 0;
+    display: grid;
+    height: 80vh;
+    grid-template-columns: repeat(11, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+}
+
+.NFTswicthToken {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.NFTswicthToken button{
+    width: 100%;
+    border-radius: 2px;
+    margin: 2% 0;
+    padding: 8%;
+    font-size: 1em;
+    background-color: black;
+    color: white;
+    transition: 0.1s linear;
+}
+
+.active_switch {
+    border-bottom: 2px solid yellow;
+}
+
+.NFTswicthToken button:focus{
+   outline: none;
+   opacity: 0.8;
+}
+
+.mint_nft {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #34333A;
+    border-radius: 20px;
+    grid-column-start: 5;
+    grid-column-end: 8;
+    grid-row-start: 1;
+    grid-row-end: 7;
+}
+
+.mint_nft img {
+    height: 20vw;
+    aspect-ratio: 1 / 1 ;
+    border-radius: 50px;
+    filter: drop-shadow(20px 20px 20px rgba(0, 0, 0, 0.395));
+}
+
+.mint_nft.header {
+    font-size: 1.5em;
+    margin-top: 10%;
+}
+
+.mint_nft input {
+    border-bottom: 2px solid white;
+    background-color: rgba(0, 0, 0, 0.626);
+    backdrop-filter: blur(10px);
+    width: 20vw;
+    height: 8%;
+    margin: 5% 0;
+}
+
+.mint_nft button {
+    margin-top: 5%;
+}
+
+.mint_token {
+    grid-column-start: 4;
+    grid-column-end: 9;
+    grid-row-start: 1;
+    grid-row-end: 7;
+    background-color: #34333A;
+    border-radius: 20px;
+    overflow-y: auto;
+}
+
+.mint_token div div:nth-child(1) {
+    font-size: 12px;
+    color: #A5A5A5;
+}
+
+.mint_token.header {
+    padding: 2% 0;
+    font-size: 1.5em;
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    margin: 2% 0;
+}
+
+.mint_token .to_claim {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+    margin-top: 2%;
+}
+
+.list_mint_token .mint_btn {
+    color: black;
+    width: 15%;
+    height: 3vw;
+    border-radius: 10px;
+    padding: 0;
+}
+
+.list_mint_token {
+    display: flex;
+    margin-bottom: 4%;
+    align-items: center;
+    justify-content: center;
+    gap: 1%;
+    
+}
+
+.list_mint_token img {
+    width: 15%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 10px;
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.647));
+}
+
+.name_mint_token {
+    width: 20%;
+    margin-left: 1%;
+}
+
+.quantity_mint_token_nft {
+    width: 20%;
+}
+
+.quantity_mint_token {
+    width: 20%;
+}
+
+.announce_mint {
+    position: fixed;
+    top: 0;
+    left: 0%;
+    transform: translate(150% , 50%);
+    height: 50vh;
+    width: 50vh;
+    background-color: gray;
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+    box-shadow: 0px 0px 20px 50vw rgba(0, 0, 0, 0.718);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    font-size: 1em;
+}
+

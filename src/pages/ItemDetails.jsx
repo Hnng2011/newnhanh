@@ -74,7 +74,7 @@ function ItemDetails02(props) {
     return (
         <div>
 
-            <PageTitle sub='Explore' title='Item Details' />
+            <PageTitle sub='Marketplace' title='Item Details' />
             <section className="tf-item-detail">
                 <div className="tf-container">
                     <div className="row">

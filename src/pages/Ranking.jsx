@@ -40,7 +40,7 @@ function Ranking(props) {
 
                             <ul className="breadcrumbs">
                                 <li><Link to="/">Home</Link></li>
-                                <li>Ranking</li>
+                                <li>Referal</li>
                             </ul>
                             <h4 className="page-title-heading">Ranking</h4>
                         </div>

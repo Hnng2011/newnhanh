@@ -2,13 +2,9 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 import icon1 from '../assets/images/svg/icon-wallet-1.svg'
-import icon2 from '../assets/images/svg/icon-wallet-2.svg'
 import icon3 from '../assets/images/svg/icon-wallet-3.svg'
 import icon4 from '../assets/images/svg/icon-wallet-4.svg'
-import icon5 from '../assets/images/svg/icon-wallet-5.svg'
-import icon6 from '../assets/images/svg/icon-wallet-6.svg'
-import icon7 from '../assets/images/svg/icon-wallet-7.svg'
-import icon8 from '../assets/images/svg/icon-wallet-8.svg'
+
 import { Link } from 'react-router-dom';
 
 Wallet.propTypes = {
