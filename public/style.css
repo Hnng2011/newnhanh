@@ -1119,6 +1119,7 @@ header {
   border-bottom: 1px solid var(--primary-color4);
   padding-right: 0 !important;
 }
+
 header #site-header-inner {
   display: flex;
   display: -webkit-box;
@@ -1133,6 +1134,7 @@ header #site-header-inner #site-logo {
   margin-right: 14.7%;
 }
 header #site-header-inner #main-nav {
+  max-height: 100vh;
   flex-shrink: 1;
 }
 header #site-header-inner .header-right {
@@ -1177,6 +1179,8 @@ header #site-header-inner .header-right .tf-button {
 header #site-header-inner .header-right .tf-button:hover {
   background-color: yellow;
   color: black;
+  border: none;
+  outline: none;
 
 }
 
@@ -1194,6 +1198,7 @@ header.absolute {
 #main-nav ul {
   margin: 0px;
 }
+
 #main-nav ul li {
   position: relative;
   list-style: none;
@@ -1892,9 +1897,15 @@ header.absolute {
   }
 
 #logo_header{
-  height: 8vh;
-  width: 8vh;
+  height: 5vh;
+  width: 5vh;
   object-fit: cover;
   border-radius: 10px;
 }
 
+.disconnect {
+  display: flex;
+  align-items: center;
+  margin-right: 0;
+  justify-content: flex-end;
+}

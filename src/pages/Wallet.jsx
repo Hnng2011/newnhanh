@@ -1,24 +1,19 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
-
 import icon1 from '../assets/images/svg/icon-wallet-1.svg'
 import icon3 from '../assets/images/svg/icon-wallet-3.svg'
 import icon4 from '../assets/images/svg/icon-wallet-4.svg'
-
+import { useConnect } from 'wagmi'
 import { Link } from 'react-router-dom';
 
-Wallet.propTypes = {
-
-};
-
 function Wallet(props) {
+    const { connect, connectors, error, isLoading, pendingConnector } = useConnect()
     const [dataWallet] = useState([
         {
             id: 1,
             img: icon1,
             cate: '',
             title: 'Meta Mask',
-            text: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. '
+            text: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. ',
         },
 
         {
@@ -26,21 +21,19 @@ function Wallet(props) {
             img: icon3,
             cate: '',
             title: 'Wallet Connect',
-            text: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. '
+            text: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. ',
         },
         {
             id: 4,
             img: icon4,
             cate: 'none',
             title: 'Coin Base',
-            text: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. '
+            text: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. ',
         },
-
 
     ])
     return (
         <div>
-
             <section className="tf-page-title">
                 <div className="tf-container">
                     <div className="row">
@@ -68,13 +61,13 @@ function Wallet(props) {
                         {
                             dataWallet.map(idx => (
                                 <div key={idx.id} className="col-lg-4 col-md-6">
-                                    <div className="tf-wallet">
+                                    <button onClick={() => connect({ ...idx.connectors })} className="tf-wallet">
                                         <div className="icon">
                                             <img src={idx.img} alt="SplitingMe" />
                                         </div>
                                         <h6 className="title"><Link to="#">{idx.title}</Link></h6>
                                         <p className="content">{idx.text}</p>
-                                    </div>
+                                    </button>
                                 </div>
                             ))
                         }

@@ -4,12 +4,30 @@ import imgscr from '../../assets/images/logo/logo.png'
 import menus from '../../pages/menu';
 import './styles.scss';
 
-
+import { useAccount, useConnect, useDisconnect } from 'wagmi'
+import { InjectedConnector } from 'wagmi/connectors/injected'
+import { Button } from 'react-bootstrap';
 // import Button from '../button';
 
 
 
 const Header = () => {
+    const { address, isConnected } = useAccount()
+    const { connect, error, isLoading, pendingConnector } = useConnect({
+        connector: new InjectedConnector(),
+    })
+
+    const shortenMiddle = (inputString, keepLength) => {
+        if (inputString.length <= keepLength * 2) {
+            return inputString;
+        }
+
+        const start = inputString.slice(0, keepLength);
+        const end = inputString.slice(-keepLength);
+
+        return `${start}...${end}`;
+    };
+
     const location = useLocation();
 
     const [scroll, setScroll] = useState(false);
@@ -78,7 +96,9 @@ const Header = () => {
                             </div>
 
                             <div className="header-right">
-                                <Link to="/wallet" className="tf-button "><span>Connect Wallet</span></Link>
+                                {isConnected ? <div className="disconnect">
+                                    <button className='tf-button'>{shortenMiddle(address, 4)}</button>
+                                </div> : <button onClick={() => connect()} className="tf-button "><span>Connect Wallet</span></button>}
                                 <Link to="/dashboard" ><span className="user "><svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <mask id="mask0_2981_49321" maskUnits="userSpaceOnUse" x="0" y="11" width="16" height="7">
                                         <path fillRule="evenodd" clipRule="evenodd" d="M0 11.2949H15.1998V18.0009H0V11.2949Z" fill="white" />
