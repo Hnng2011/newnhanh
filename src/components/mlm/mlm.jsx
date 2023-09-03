@@ -165,7 +165,7 @@ const Mlm = () => {
                     <div className="mlm-content">
                         <div className='mlm-head'>Basic</div>
                         <div className='mlm-price'>100$
-                            <div>10$ for 10000 User <div className='status' style={statusstyle}></div><div>{slot.data.toString()} User Buy</div></div>
+                            <div>10$ for 10000 User <div className='status' style={statusstyle}></div><div>{String(slot.data)} User Buy</div></div>
                         </div>
                         <div className='mlm-details'>
                             <div>Level : <span>1</span></div>
