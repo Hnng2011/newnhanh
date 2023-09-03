@@ -7,11 +7,12 @@ import routes from './pages';
 import Page404 from './pages/404';
 import '../src/assets/binasea.css';
 import '../src/assets/font-awesome.css';
-import { WagmiConfig, createConfig, configureChains, mainnet } from 'wagmi'
+import { WagmiConfig, createConfig, configureChains } from 'wagmi'
+import { sepolia } from 'wagmi/chains';
 import { publicProvider } from 'wagmi/providers/public'
 
 const { publicClient, webSocketPublicClient } = configureChains(
-    [mainnet],
+    [sepolia],
     [publicProvider()],
 )
 

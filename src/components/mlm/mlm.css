@@ -185,7 +185,6 @@
 
 .mlm:nth-child(5) .mlm-price div .status {
     height: 0;
-    width: calc(65% / 2); /*100%*/
     margin: 0 2%;
     border: 10px solid rgb(0, 128, 255);
     border-radius: 20px;
