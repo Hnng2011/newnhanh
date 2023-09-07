@@ -3,9 +3,11 @@ import './mlm.css'
 import { usePrepareContractWrite, useContractWrite, useAccount, useContractRead, useWaitForTransaction } from 'wagmi'
 import TokenSale from '../../assets/artifacts/contracts/TokenSale.sol/TokenSale.json'
 import TokenSaleAdd from '../../assets/deployment/TokenSale.json'
+import USDTAdd from '../../assets/deployment/USDT.json'
+import USDT from '../../assets/artifacts/contracts/USDT.sol/USDT.json'
 
 const Mlm = () => {
-    const { isConnected } = useAccount()
+    const { address, isConnected } = useAccount()
     const [packages, setPackages] = useState(null)
     const [buying, setBuying] = useState(false)
 
@@ -54,27 +56,72 @@ const Mlm = () => {
     });
 
 
+    const allowance = useContractRead({
+        address: USDTAdd.USDTAddress,
+        abi: [{
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "owner",
+                    "type": "address"
+                },
+                {
+                    "internalType": "address",
+                    "name": "spender",
+                    "type": "address"
+                }
+            ],
+            "name": "allowance",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        }],
+        functionName: "allowance",
+        args: [address, TokenSaleAdd.address],
+    })
+
+
     const { config } = usePrepareContractWrite({
         address: TokenSaleAdd.address,
         abi: [TokenSale.abi[2]],
         functionName: "buyPackage",
-        args: [packages],
-        value: price.data
+        args: [packages, price.data],
     })
 
+    const { config: usdtApprove } = usePrepareContractWrite({
+        address: USDTAdd.USDTAddress,
+        abi: [USDT.abi[4]],
+        functionName: "approve",
+        args: [TokenSaleAdd.address, Number(price.data)],
+    })
+
+
+
     const { isLoading, write } = useContractWrite(config)
+    const { write: approve, isLoading: Approving } = useContractWrite(usdtApprove)
 
     const buy = (id) => {
-        setPackages((prevState) => id);
+        setPackages(id);
         setBuying(true)
-
     }
 
     useEffect(() => {
+
         if (buying === true) {
-            write?.()
-        }
-        setBuying(false)
+            if (allowance.data < price.data && price.data)
+                approve();
+            else {
+                write?.();
+            }
+        };
+
+        setBuying(false);
     }, [buying])
 
     const statusstyle = {
@@ -96,7 +143,7 @@ const Mlm = () => {
                             <div>Cap : <span> $99.9M</span></div>
                         </div>
                         <div className='mlm-buy'>
-                            <button disabled={!isConnected && !write} onClick={() => buy(1)}> {isLoading ? 'Buying...' : 'Buy Now'}</button>
+                            <button disabled={!isConnected && !write} onClick={() => buy(1)}> {isLoading ? 'Buying...' : Approving ? 'Approving' : 'Buy Now'}</button>
                         </div>
                     </div>
                 </div>
@@ -115,7 +162,7 @@ const Mlm = () => {
                             <div>Cap : <span> $99.8M</span></div>
                         </div>
                         <div className='mlm-buy'>
-                            <button disabled={!isConnected && !write} onClick={() => buy(2)}> {isLoading ? 'Buying...' : 'Buy Now'}</button>
+                            <button disabled={!isConnected && !write} onClick={() => buy(2)}> {isLoading ? 'Buying...' : Approving ? 'Approving' : 'Buy Now'}</button>
                         </div>
                     </div>
                 </div>
@@ -134,7 +181,7 @@ const Mlm = () => {
                             <div>Cap : <span> $99.5M</span></div>
                         </div>
                         <div className='mlm-buy'>
-                            <button disabled={!isConnected && !write} onClick={() => buy(3)}> {isLoading ? 'Buying...' : 'Buy Now'}</button>
+                            <button disabled={!isConnected && !write} onClick={() => buy(3)}> {isLoading ? 'Buying...' : Approving ? 'Approving' : 'Buy Now'}</button>
                         </div>
                     </div>
                 </div>
@@ -153,7 +200,7 @@ const Mlm = () => {
                             <div>Cap : <span> $99M</span></div>
                         </div>
                         <div className='mlm-buy'>
-                            <button disabled={!isConnected && !write} onClick={() => buy(4)}> {isLoading ? 'Buying...' : 'Buy Now'}</button>
+                            <button disabled={!isConnected && !write} onClick={() => buy(4)}> {isLoading ? 'Buying...' : Approving ? 'Approving' : 'Buy Now'}</button>
                         </div>
                     </div>
                 </div>
@@ -174,7 +221,7 @@ const Mlm = () => {
                             <div>Cap : <span> $100M</span></div>
                         </div>
                         <div className='mlm-buy'>
-                            <button disabled={!isConnected && !write} onClick={() => buy(0)}> {isLoading ? 'Buying...' : 'Buy Now'}</button>
+                            <button disabled={!isConnected && !write} onClick={() => buy(0)}> {isLoading ? 'Buying...' : Approving ? 'Approving' : 'Buy Now'}</button>
                         </div>
                     </div>
                 </div>

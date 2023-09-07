@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 import { FreeMode, Thumbs, EffectCoverflow, Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -11,14 +10,8 @@ import shape4 from '../../assets/images/slider/slider-15.png'
 import { Link } from 'react-router-dom';
 
 
-
-Banner03.propTypes = {
-    data: PropTypes.array,
-};
-
 function Banner03(props) {
     const { data } = props;
-    const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
     return (
         <section className="tf-slider">
@@ -29,7 +22,6 @@ function Banner03(props) {
                             <Swiper
                                 style={{
                                     "--swiper-navigation-color": "#fff",
-                                    "--swiper-pagination-color": "#fff",
                                 }}
                                 loop={true}
                                 effect={"coverflow"}
@@ -37,10 +29,6 @@ function Banner03(props) {
                                 centeredSlides={true}
                                 spaceBetween={0}
                                 slidesPerView={3}
-                                // autoplay={{
-                                //     delay: 2500,
-                                //     disableOnInteraction: true,
-                                //   }}
                                 coverflowEffect={{
                                     rotate: 0,
                                     stretch: 15,
@@ -48,9 +36,9 @@ function Banner03(props) {
                                     modifier: 1,
                                     slideShadows: false,
                                 }}
-                                thumbs={{ swiper: thumbsSwiper }}
+                                thumbs={{ swiper: null }}
                                 modules={[Autoplay, FreeMode, Thumbs, EffectCoverflow]}
-                                className=" mySwiper2 slider-thump"
+                                className="slider-thump"
                             >
 
                                 {

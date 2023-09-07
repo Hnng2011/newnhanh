@@ -7,8 +7,8 @@
 }
 
 .NFTswicthToken {
-    grid-column-start: 2;
-    grid-column-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
 }
 
 .NFTswicthToken button{
@@ -46,6 +46,7 @@
 
 .mint_nft img {
     height: 20vw;
+    margin-bottom: 15%;
     aspect-ratio: 1 / 1 ;
     border-radius: 50px;
     filter: drop-shadow(20px 20px 20px rgba(0, 0, 0, 0.395));
@@ -67,11 +68,12 @@
 
 .mint_nft button {
     margin-top: 5%;
+    margin-bottom: 15%;
 }
 
 .mint_token {
-    grid-column-start: 4;
-    grid-column-end: 9;
+    grid-column-start: 3;
+    grid-column-end: 10;
     grid-row-start: 1;
     grid-row-end: 7;
     background-color: #34333A;
@@ -117,11 +119,10 @@
     align-items: center;
     justify-content: center;
     gap: 1%;
-    
 }
 
 .list_mint_token img {
-    width: 15%;
+    width: 10%;
     aspect-ratio: 1 / 1;
     object-fit: cover;
     border-radius: 10px;
@@ -134,11 +135,11 @@
 }
 
 .quantity_mint_token_nft {
-    width: 20%;
+    width: 15%;
 }
 
 .quantity_mint_token {
-    width: 20%;
+    width: 15%;
 }
 
 .announce_mint {
@@ -159,3 +160,45 @@
     font-size: 1em;
 }
 
+#mintinput::placeholder {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.293);
+}
+
+#mintinput {
+    height: 1vw;
+    color: white;
+    outline: 1px solid white;
+    width: 80%;
+    font-size: 12px;
+    border-radius: 2px;
+}
+
+
+@media (max-width: 991px) {
+    .NFTswicthToken:nth-child(1) {
+        grid-row-start: 1;
+        grid-column-end: 3;
+    }
+
+    .NFTswicthToken:nth-child(1) {
+        grid-column-start: 2;
+        grid-column-end: 4;
+    }
+
+    .NFTswicthToken:nth-child(1) {
+        grid-column-start: 4;
+        grid-column-end: 6;
+    }
+
+    .NFTswicthToken:nth-child(1) {
+        grid-column-start: 6;
+        grid-column-end: 8;
+    }
+
+    .mint_token , .mint_nft {
+        grid-column-start: 2;
+        grid-column-end: 11;
+        grid-row-start: 2;
+    }
+}
