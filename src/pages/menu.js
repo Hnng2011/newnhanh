@@ -20,11 +20,7 @@ const menus = [
         name: 'Pool',
         links: '/pool',
     },
-    {
-        id: 5,
-        name: 'Contact',
-        links: '/contact',
-    },
+
     {
         id: 6,
         name: 'Mint',

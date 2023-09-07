@@ -86,7 +86,6 @@ const Mlm = () => {
         args: [address, TokenSaleAdd.address],
     })
 
-
     const { config } = usePrepareContractWrite({
         address: TokenSaleAdd.address,
         abi: [TokenSale.abi[2]],
@@ -104,7 +103,7 @@ const Mlm = () => {
 
 
     const { isLoading, write } = useContractWrite(config)
-    const { write: approve, isLoading: Approving, isSuccess } = useContractWrite(usdtApprove)
+    const { write: approve, isLoading: Approving } = useContractWrite(usdtApprove)
 
     const buy = (id) => {
         setPackages(id);
@@ -118,6 +117,7 @@ const Mlm = () => {
             write?.();
         }
         console.log(allowance.data)
+        console.log(buying)
     }, [buying])
 
 

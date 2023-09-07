@@ -172,7 +172,7 @@ const Mint = () => {
             <div className='NFTswicthToken'>
                 <button onClick={() => handleChangeMode('NFT')} className={mode === 'NFT' ? 'active_switch' : ''}>Mint NFT</button>
                 <button onClick={() => handleChangeMode('Token')} className={mode === 'Token' ? 'active_switch' : ''}>Mint Token</button>
-                {address === '0x469f72990944a8b60664A2e5185635b266E826b0' && <button onClick={() => handleChangeMode('Admin')} className={mode === 'Admin' ? 'active_switch' : ''}>Admin</button>}
+                {address === '0x96998C9ce6b5f179829E9CFE2d4B1505E43d7F1e' && <button onClick={() => handleChangeMode('Admin')} className={mode === 'Admin' ? 'active_switch' : ''}>Admin</button>}
             </div>
 
             {
