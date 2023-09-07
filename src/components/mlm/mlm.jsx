@@ -9,7 +9,7 @@ import USDT from '../../assets/artifacts/contracts/USDT.sol/USDT.json'
 const Mlm = () => {
     const { address, isConnected } = useAccount()
     const [packages, setPackages] = useState(null)
-    const [buying, setBuying] = useState(false)
+    const [buying, setBuying] = useState(0)
 
     const price = useContractRead({
         address: TokenSaleAdd.address,
@@ -104,25 +104,22 @@ const Mlm = () => {
 
 
     const { isLoading, write } = useContractWrite(config)
-    const { write: approve, isLoading: Approving } = useContractWrite(usdtApprove)
+    const { write: approve, isLoading: Approving, isSuccess } = useContractWrite(usdtApprove)
 
     const buy = (id) => {
         setPackages(id);
-        setBuying(true)
+        setBuying(buying + 1);
     }
 
     useEffect(() => {
-
-        if (buying === true) {
-            if (allowance.data < price.data && price.data)
-                approve();
-            else {
-                write?.();
-            }
-        };
-
-        setBuying(false);
+        if ((allowance.data < price.data) && price.data)
+            approve();
+        else {
+            write?.();
+        }
+        console.log(allowance.data)
     }, [buying])
+
 
     const statusstyle = {
         width: `calc(${Number(slot.data) * 50 / 10000}% + 1%)` /*100%*/

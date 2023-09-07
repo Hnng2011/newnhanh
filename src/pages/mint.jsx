@@ -5,7 +5,6 @@ import AddSlot from '../assets/deployment/FactoryToken.json'
 import AddSlotAbi from '../assets/artifacts/contracts/FactoryToken.sol/FactoryToken.json'
 import checkNFTAbi from '../assets/artifacts/contracts/NFT.sol/NFTSplittingME.json'
 import checkNFT from '../assets/deployment/NFTSplittingME.json'
-import Token from '../assets/deployment/CampaignTypesTokenERC20.json'
 import TokenAbi from '../assets/artifacts/contracts/CampaignTypesTokenERC20.sol/CampaignTypesTokenERC20.json'
 import './mint.css'
 
@@ -35,7 +34,6 @@ const TokenMint = ({ data }) => {
         abi: [TokenAbi.abi[16]],
         functionName: 'symbol',
     })
-
 
     const { config } = usePrepareContractWrite({
         address: AddSlot.address,
@@ -69,7 +67,7 @@ const TokenMint = ({ data }) => {
     return (
         <div className='list_mint_token'>
             {
-                String(nftused[2]) != data && <>
+                nftused[2].toString() != data && <>
                     <img src="https://lp-cms-production.imgix.net/image_browser/Ho%20Chi%20Minh%20City%20skyline.jpg?auto=format&w=1440&h=810&fit=crop&q=75" alt="splittingme" />
                     <div className='name_mint_token'>
                         <div>NFT id:</div>
@@ -88,7 +86,7 @@ const TokenMint = ({ data }) => {
             }
 
             {
-                String(nftused[2]) === data && <>
+                nftused[2].toString() === data && <>
                     <img src="https://cdn-icons-png.flaticon.com/512/566/566295.png" alt="splittingme" />
                     <div className='name_mint_token'>
                         <div>Token Name:</div>
