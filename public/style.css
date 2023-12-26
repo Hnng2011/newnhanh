@@ -228,7 +228,6 @@ select {
 /* General
 -------------------------------------------------------------- */
 body,
-button,
 input,
 select,
 textarea {
@@ -446,7 +445,6 @@ input {
   line-height: normal;
 }
 
-button,
 input,
 select,
 textarea {
@@ -652,7 +650,6 @@ input[type=color]::placeholder {
 }
 
 /* Button */
-button,
 input[type=button],
 input[type=reset],
 input[type=submit] {

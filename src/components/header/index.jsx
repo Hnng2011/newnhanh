@@ -13,7 +13,7 @@ import { Button } from 'react-bootstrap';
 
 const Header = () => {
     const { address, isConnected } = useAccount()
-    const { connect, error, isLoading, pendingConnector } = useConnect({
+    const { connect } = useConnect({
         connector: new InjectedConnector(),
     })
 
